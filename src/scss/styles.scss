@@ -1,0 +1,446 @@
+  /*                       */
+ /* Default style imports */
+/*                       */
+
+@import 'base';
+
+
+// Should get Hancock to embed these in base, at some point:
+
+@import 'header';
+@import 'footer';
+
+ul {
+  @include type(1.4rem, 2.4rem, 0);
+  li {
+    cursor: pointer;
+  }
+}
+
+.no-show {
+  display: none !important;
+}
+.active {
+  background-color: lighten($dmnblue, 10) !important;
+  color: white;
+}
+
+.floater-head {
+  font-family: $serif;
+  z-index: 100;
+  position: relative;
+  margin-top: 2.4rem !important;
+  width: 95% !important;
+  h1 {
+    font-weight: 800;
+    font-family: $sans;
+    text-transform: uppercase;
+    font-size: 10rem !important;
+    margin-top: -105px;
+    line-height: 10rem !important;
+    letter-spacing: -5px !important;
+  }
+}
+
+.hero-knockout {
+  max-width: 100px;
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width: 860px) {
+  .floater-head h1 {
+    font-size: 7rem !important;
+    line-height: 7rem !important;
+    margin-top: -75px;
+  }
+  .hero-knockout {
+    max-width: 80px;
+  }
+
+}
+@media (max-width: 500px) {
+  .floater-head h1 {
+    font-size: 6rem !important;
+    line-height: 6rem !important;
+    margin-top: -65px;
+  }
+  .floater-head h2 {
+    font-size: 2rem !important;
+    line-height: 2.4rem !important;
+  }
+  .hero-knockout {
+    max-width: 70px;
+  }
+}
+
+
+#dirk-graphic-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 4.8rem auto 0;
+  position: relative;
+}
+
+#filters {
+  width: 100%;
+  z-index: 10;
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid $black235;
+  box-shadow: -2px -2px 4px rgba($black235, .8), 2px -2px 4px rgba($black235, .8);
+  bottom: 0;
+}
+
+#shot-chart {
+    width: 1200px;
+    margin: 0 0;
+    height: calc((1200px / .61289831) / 2);
+    overflow: hidden;
+    float: right;
+}
+
+.button-container {
+  float: right;
+  width: 200px;
+  .itn-btn {
+    width: 49%;
+    margin-right: 2%;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+#dirk-legend {
+  text-align: center;
+  @include type(1.4rem, 1.8rem, 0);
+  margin-bottom: 1.2rem;
+  span:first-of-type {
+    margin-right: 10px;
+  }
+  span:before{
+    @include psuedoElement(1rem, 1rem, relative);
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 5px;
+    opacity: .9;
+  }
+  span.shot-made:before {
+    background-color: #329ce8;
+  }
+  span.shot-missed:before {
+    background-color: #ff786e;
+  }
+}
+
+.source {
+  @include type(1.2rem, 1.5rem, 0);
+  max-width: 650px;
+  margin: 2.4rem auto 0;
+  a:visited {
+    color: $dmnblue;
+  }
+}
+
+
+/*
+-----------------------------------------------------------------------------
+FILTER SETUP
+-----------------------------------------------------------------------------
+*/
+
+
+.controls {
+  width: calc(100% - 220px);
+  float: left;
+  padding-right: 20px;
+  border-right: 1px solid $black235;
+  h5 {
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+  }
+}
+
+
+// browsers that support grid will ignore the float rule. we'll cacel out widths
+// and margins below in a @support block
+.filter__container {
+  width: 23%;
+  margin-right: 2.6%;
+  display: inline-block;
+  border-bottom: 1px solid $dmnblue;
+  float: left;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  select {
+    width: 100%;
+    border: none;
+    font-size: 1.4rem;
+    font-family: $sans;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px 0 0;
+    background-color: white;
+    display: inline-block;
+    -webkit-border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../images/arrows.svg');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    letter-spacing: -.25px;
+    color: $black33
+  }
+}
+
+/*
+-----------------------------------------------------------------------------
+THE SHOT CHART AND TOOLTIP
+-----------------------------------------------------------------------------
+*/
+
+#tooltip {
+  font-family: $sans;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include type(1.1rem, 1.5rem, 0);
+  padding: 5px;
+  width: 200px;
+  background-color: rgba(255,255,255,.9);
+  width: 150px;
+  span {
+    text-transform: capitalize;
+  }
+}
+
+.int-btn {
+    font-family: $sans;
+    display: block;
+    border-radius: 3px;
+    background-color: $black245;
+    border: 1px solid $black215;
+    color: $black33;
+    font-weight: 100;
+    width: 49%;
+    float: left;
+    min-width: 1px;
+    @include type(1.2rem, 3.6rem, 0);
+    cursor: pointer;
+    padding: 0 0;
+    margin-right: 2%;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @include transition(all, .1s, ease-out);
+    &:hover {
+        background-color: lighten($dmnblue, 10%);
+        box-shadow: none;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.mapboxgl-ctrl-attrib {
+  display: none;
+}
+
+#dirk-scroller {
+  padding-top: calc((1200px / .61289831) / 2);
+  position: relative;
+}
+
+#dirk-graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.locked {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -600px;
+  }
+  &.locked-bottom {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+  }
+}
+
+.scroll-slide {
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  display: table;
+  width: 100%;
+  .slide-content-container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .slide-content {
+    max-width: 350px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid $black235;
+    box-shadow: 2px 2px 4px rgba($black121, .25), -2px 2px 4px rgba($black121, .25), 2px -2px 4px rgba($black121, .25), -2px -2px 4px rgba($black121, .25);
+    padding: 20px;
+    h6 {
+      font-weight: 700;
+    }
+    p {
+      @include type(1.4rem, 1.8rem, .6rem);
+      &:first-of-type {
+        font-weight: 700;
+      }
+      &.explore__text {
+        font-weight: 100;
+        a:visited {
+          color: $dmnblue;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1280px) {
+  #dirk-graphic-container {
+    max-width: 900px;
+  }
+  #shot-chart {
+    width: 900px;
+    height: calc((900px / .53389831) / 2);
+  }
+  #dirk-scroller {
+    padding-top: calc((900px / .53389831) / 2);
+  }
+  #dirk-graphic {
+    &.locked {
+      margin-left: -450px;
+    }
+    &.locked-bottom {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 975px) {
+  #filters {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #dirk-graphic-container {
+    width: 95vw;
+  }
+  #shot-chart {
+    float: none;
+    width: 95vw;
+    height: calc((95vw / .53389831) / 2);
+  }
+  #dirk-scroller {
+    padding-top: calc((95vw / .53389831) / 2);
+    position: relative;
+  }
+  #dirk-graphic {
+    &.locked {
+      left: 50%;
+      margin-left: -47.5vw;
+    }
+    &.locked-bottom {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      margin-left: 0;
+    }
+  }
+  .button-container {
+    padding-bottom: 0;
+    border-bottom: none;
+    top: 0;
+    right: 2.5%;
+    left: auto;
+    z-index: 10;
+    width: 100px;
+    button {
+      width: 100%;
+      margin-bottom: 1.2rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .filter__container {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 1.2rem;
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
+  #controls__explore {
+    width: calc(100% - 120px);
+  }
+  #chart-nav {
+    ul {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #chart-nav {
+    ul {
+      max-width: none;
+    }
+  }
+  #controls__explore {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+    border-right: none;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid $black235;
+  }
+
+  .button-container {
+    width: 100%;
+    float: none;
+    button {
+      width: 49%;
+      margin-right: 2%;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// if grid is supported, disable width and margin
+@supports (display: grid) {
+  #controls__explore {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .filter__container {
+    width: auto;
+    margin: 0 0;
+  }
+  @media (max-width: 975px) {
+    #controls__explore {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

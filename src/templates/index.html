@@ -1,0 +1,403 @@
+{%extends 'base.html'%}
+{%import 'partials/img.html' as img%}
+
+
+{%block custom_meta%}
+<meta content="{{keywords|join(',')}}" name="keywords" />
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta content="{{shareText}}" name="description" />
+<title>{{pageTitle}}</title>
+<meta property="og:url" content="{{url}}" />
+<meta property="og:title" content="{{shareTitle}}"/>
+<meta property="og:description" content="{{shareText}}" name="description"/>
+<meta property="og:image" content="{{imgURL}}"/>
+<meta property="og:image:height" content="{{imgHeight}}"/>
+<meta property="og:image:width" content="{{imgWidth}}"/>
+<meta property="og:type" content="article" />
+<meta property="article:author" content="{{authorFBProfile}}" />
+<meta property="article:publisher" content="https://www.facebook.com/dallasmorningnews/" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{sectionTwitter}}" />
+<meta name="twitter:creator" content="@{{authorTwitter}}" />
+
+<meta name="liveFyreID" content="{{id}}" />
+
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{{shareTitle}}",
+        "url": "{{url}}",
+        "thumbnailUrl": "{{imgURL}}",
+        "dateCreated": "{{publishDate}}",
+        "articleSection": "{{section}}",
+        "creator": ["{{authors|join('","')|safe}}"],
+        "keywords": ["{{keywords|join('","')|safe}}"]
+      }
+</script>
+
+<meta property="og:keywords" content="{{keywords|join(',')}}"/>
+
+<meta name="news_keywords" content="{{keywords|join(',')}}"/>
+{%endblock%}
+
+
+{%block custom_head%}
+<link rel="canonical" href="{{url}}" />
+<link href="https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css" rel="stylesheet" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js"></script>
+{%endblock%}
+
+
+{%block ad%}
+<script type="text/javascript" src="//www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript">
+DFP_networkId = "11222444";
+var DFPSlotSizes = window.isMobile ? [[320,50]] : [[728,90],[970,30]];
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+pbjs.que.push(function() {
+  var pageAds = { //   adUnitID: "position"
+              dfpAdPositionTop: "Top",
+              dfpAdPositionMiddle: "Top2",
+              dfpAdPositionBottom: "Top2"
+  };
+
+  for(i in pageAds){
+      var bidSlot = new Object();
+      bidSlot.code = i;
+      bidSlot.sizes = DFPSlotSizes;
+      bidSlot.bids = window.isMobile ? window.mobileBids[pageAds[i]] : window.desktopBids[pageAds[i]];
+      if(typeof bidSlot.bids != "undefined"){
+          if(typeof pbjs.addAdUnits != "undefined"){
+              pbjs.addAdUnits(bidSlot);
+          }
+          window.bidSlots[i] = bidSlot;
+      }
+  }
+});
+googletag.cmd.push(function () {
+  var DFP_sitepage = "DMN/interactives";
+  var dfpSizeMapping = googletag.sizeMapping().
+          addSize([992, 480], [[728,90],[970,30]]).
+          addSize([0, 0], [[320,50]]).
+          build();
+
+
+  var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionTop")
+                  .defineSizeMapping(dfpSizeMapping)
+                  .setTargeting("position", "Top")
+                  .addService(googletag.pubads());
+
+  /*
+  var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle")
+                  .defineSizeMapping(dfpSizeMapping)
+                  .setTargeting("position", "Top2")
+                  .addService(googletag.pubads());
+  */
+
+  /*
+  var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom")
+                  .defineSizeMapping(dfpSizeMapping)
+                  .setTargeting("position", "Top2")
+                  .addService(googletag.pubads());
+  */
+
+  googletag.pubads().enableAsyncRendering();
+  googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+
+});
+</script>
+{%endblock%}
+
+
+{%block content%}
+<header id="story-head" class="floater-head">
+  <img class="hero-knockout" src="images/_dirk-hero.png" alt="Dirk's signature fadeaway jumper" />
+  <h1>Swish 41</h1>
+  <h2>20 years. 25,000 shots. Tour every dunk, layup, three-pointer and, of course, fadeaway jumper that made up Dirk Nowitzki’s career</h2>
+
+  <div class="byline-block">
+    <p>By <a target="_blank" href="mailto:emailaddresshere">John Hancock</a> | Interactives Editor</p>
+    <p>Published Month Date, Year</p>
+  </div>
+
+  <div class="shareComments shareCommentsTop">
+    <ul id="share-bar1"></ul>
+  </div>
+</header>
+
+<div class="content-container">
+
+  <div id="dirk-graphic-container" class="clearfix">
+
+    <div id="filters" class="clearfix">
+
+      <div class="controls clearfix" id="controls__explore">
+        <div class="filter__container">
+          <select id="r">
+            <option value="all">Made and Missed</option>
+            <option value="1">Made shots</option>
+            <option value="0">Missed shots</option>
+          </select>
+        </div>
+
+        <div class="filter__container">
+          <select id="opp">
+            <option value="all">All opponents</option>
+            <option value="ATL">Atlanta Hawks</option>
+            <option value="BOS">Boston Celtics</option>
+            <option value="BKN">Brooklyn Nets</option>
+            <option value="CHA">Charlotte Bobcats</option>
+            <option value="CHH">Charlotte Hornets</option>
+            <option value="CHI">Chicago Bulls</option>
+            <option value="CLE">Cleveland Cavaliers</option>
+            <option value="DEN">Denver Nuggets</option>
+            <option value="DET">Detroit Pistons</option>
+            <option value="GSW">Golden State Warriors</option>
+            <option value="HOU">Houston Rockets</option>
+            <option value="IND">Indiana Pacers</option>
+            <option value="LAC">Los Angeles Clippers</option>
+            <option value="LAL">Los Angeles Lakers</option>
+            <option value="MEM">Memphis Grizzlies</option>
+            <option value="MIA">Miami Heat</option>
+            <option value="MIL">Milwaukee Bucks</option>
+            <option value="MIN">Minnesota Timberwolves</option>
+            <option value="NOH">New Orleans Hornets</option>
+            <option value="NOP">New Orleans Pelicans</option>
+            <option value="NJN">New Jersey Nets</option>
+            <option value="NYK">New York Knicks</option>
+            <option value="OKC">Oklahoma City Thunder</option>
+            <option value="ORL">Orlando Magic</option>
+            <option value="PHI">Philadelphia 76ers</option>
+            <option value="PHX">Phoenix Suns</option>
+            <option value="POR">Portland Trailblazers</option>
+            <option value="SAC">Sacramento Kings</option>
+            <option value="SAS">San Antonio Spurs</option>
+            <option value="SEA">Seattle SuperSonics</option>
+            <option value="TOR">Toronto Raptors</option>
+            <option value="WAS">Washington Wizards</option>
+            <option value="UTA">Utah Jazz</option>
+            <option value="VAN">Vancouver Grizzlies</option>
+          </select>
+        </div>
+
+        <div class="filter__container">
+          <select id="sr">
+            <option value="all">Any range</option>
+            <option value="Less Than 8 ft.">Less than 8 feet</option>
+            <option value="8-16 ft.">8 to 16 feet</option>
+            <option value="16-24 ft.">16 - 24 feet</option>
+            <option value="24+ ft.">More than 24 feet</option>
+            <option value="Back Court Shot">Half court or more</option>
+          </select>
+        </div>
+
+        <div class="filter__container">
+          <select id="y">
+            <option value="all">Any year</option>
+            <option value="1998-99">1998 - 1999</option>
+            <option value="1999-00">1999 - 2000</option>
+            <option value="2000-01">2000 - 2001</option>
+            <option value="2001-02">2001 - 2002</option>
+            <option value="2002-03">2002 - 2003</option>
+            <option value="2003-04">2003 - 2004</option>
+            <option value="2004-05">2004 - 2005</option>
+            <option value="2005-06">2005 - 2006</option>
+            <option value="2006-07">2006 - 2007</option>
+            <option value="2007-08">2007 - 2008</option>
+            <option value="2008-09">2008 - 2009</option>
+            <option value="2009-10">2009 - 2010</option>
+            <option value="2010-11">2010 - 2011</option>
+            <option value="2011-12">2011 - 2012</option>
+            <option value="2012-13">2012 - 2013</option>
+            <option value="2013-14">2013 - 2014</option>
+            <option value="2014-15">2014 - 2015</option>
+            <option value="2015-16">2015 - 2016</option>
+            <option value="2016-17">2016 - 2017</option>
+            <option value="2017-18">2017 - 2018</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="button-container clearfix">
+        <button id="court-flipper" class="int-btn frontcourt">Backcourt</button>
+        <button id="court-reset" class="int-btn">Reset</button>
+      </div>
+
+    </div>
+  <div id="dirk-scroller">
+    <div id="dirk-graphic" class="clearfix">
+      <div id="dirk-legend"><span class="shot-made">Made</span> <span class="shot-missed">Missed</span></div>
+      <div id="shot-chart"></div>
+      <div id="tooltip" class="no-show">
+        <p><strong>Date: </strong><span id="tt-date"></span></p>
+        <p><strong>Opp.: </strong><span id="tt-opp"></span></p>
+        <p><strong>Result: </strong><span id="tt-result"></span></p>
+        <p><strong>Type: </strong><span id="tt-type"></span></p>
+        <p><strong>Distance: </strong><span id="tt-distance"></span></p>
+        <p><strong>Shot ID: </strong><span id="tt-id"></span></p>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="0">
+          <h6>A rough start</h6>
+          <p>Feb. 5, 1999 vs. Seattle</p>
+          <p>Dirk made his debut on Feb. 5, 1999. It wasn’t exactly a preview of what was to come. In just 16 minutes, Dirk went 0-for-5 from the field, finishing with just two points.</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="1">
+          <h6>First field goal</h6>
+          <p>Feb. 7, 1999 vs. Golden State</p>
+          <p>Two nights after he debuted with an 0-for from the field, Dirk finally scored his first field goal, a 16-foot jumper from the right baseline. He finished the night with 16 points.</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="2">
+          <h6>Career high</h6>
+          <p>Dec. 2, 2004 vs. Houston Rockets</p>
+          <p>Dirk scored a career-high 53 in a 113-106 win against the Rockets in 2004. He finished the night 15-for-32 from the field and 21-for-22 from the free throw line.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="3">
+          <h6>10,000 points</h6>
+          <p>Jan. 18, 2005 vs. Washington</p>
+          <p>Dirk notched his 10,000 point with a 23-foot jumper against the Washington Wizards, becoming the fifth (and last) Maverick to reach that milestone.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="4">
+          <h6>Game 6, 2006 Western Conf. Semifinals</h6>
+          <p>May 22, 2006 vs. San Antonio</p>
+          <p>In Game 7 of the Western Conference semifinals, Dirk delievered a driving layup against Bruce Bowen and Manu Ginobli, drawing a foul. He nailed the free throw, sending the game to overtime.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="5">
+          <h6>20,000 points</h6>
+          <p>Jan. 13, 2010 vs. LA Lakers</p>
+          <p>Dirk reached 20,000 points with a 13-foot jumper over Los Angeles Lakers’ forward Lamar Odom in 2010. He’s the only Maverick to ever reach the 20,000 point mark.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="6">
+          <h6>Final touch on a title</h6>
+          <p>June 12, 2011 vs. Miami</p>
+          <p>Dirk put the finishing touches on the Mavericks’ first NBA Championship, scoring the team’s final field goal with 31 seconds left in Game 6 of the NBA Finals.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="7">
+          <h6>30,000 points</h6>
+          <p>March 7, 2017 vs. LA Lakers</p>
+          <p>Dirk scored his 30,000th point with a fadeaway jumper from the right baseline over the Lakers’ Larry Nance Jr., becoming the sixth player to join the 30,000 point club.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="8">
+          <h6>Final field goal</h6>
+          <p>April 3, 2018 vs. Portland</p>
+          <p>Dirk’s final shot came in a 115-109 win over the Portland Trailblazers. With 56 seconds left in the third quarter, Dirk hit a 13-foot jumper, the last shot of his career.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-slide">
+      <div class="slide-content-container">
+        <div class="slide-content" data-milestoneid="8">
+          <h6>Want to explore more?</h6>
+          <p class="explore__text">Want to take your own tour of Dirk’s career? <a href="#filters">Click here</a> to return to the top and filter Dirk’s career however you want.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="source"><strong>Source:</strong> NBA.com. <strong>Note:</strong> The NBA does not account for one field goal attempt (a miss), by Nowitzki against Denver on Feb. 12, 1999. <strong>Hat tip:</strong> If you’re interested in taking a tour of another NBA great, have a look at <a href="http://graphics.latimes.com/kobe-every-shot-ever/">the inspiration for this piece</a> by the Los Angeles Times.</p>
+
+  </div>
+
+</div>
+
+<section class="content-well">
+
+  <p class="twitter-tag">Follow John Hancock on Twitter at <a href="https://www.twitter.com/Hancock_JohnD">@Hancock_JohnD.</a></p>
+
+  <section class="more clearfix">
+    <h5>Read more from The Dallas Morning News</h5>
+    <a class="clearfix" href="#">
+      <img src="images/_defaultImage.jpg" alt="#" />
+      <h6>Story title goes here</h6>
+      <p>Description of the story goes in this spot here</p>
+    </a>
+    <a class="clearfix" href="#">
+      <img src="images/_defaultImage.jpg" alt="#" />
+      <h6>Story title goes here</h6>
+      <p>Description of the story goes in this spot here</p>
+    </a>
+    <a class="clearfix" href="#">
+      <img src="images/_defaultImage.jpg" alt="#" />
+      <h6>Story title goes here</h6>
+      <p>Description of the story goes in this spot here</p>
+    </a>
+  </section>
+  <!-- end more -->
+
+  <div class="shareComments">
+    <div id="comments"></div>
+  </div>
+  <!-- end shareComments -->
+
+</section>
+<!-- end contentWell -->
+{%endblock%}
+
+{%block custom_foot%}
+	<script type="text/javascript"></script>
+{%endblock%}
+
+{%block custom_social_meta%}
+<script type="text/javascript">
+  var storyTitle = "{{tweetText}}", // headline in tweet card
+	storyURL = "{{url}}",
+	leadText = "{{shareText}}", //description in tweet card
+	storyIMG = "{{imgURL}}",
+	storyAuthor = "{% for author in authors %}{{author}}{{', ' if not loop.last}}{% endfor %}",
+	twitterTag = "{{sectionTwitter}}",
+	comments = true,
+	share = true;
+	OAS_sitepage = 'www.dallasnews.com/{{desk}}/{{section}}/';
+</script>
+{%endblock%}

@@ -1,0 +1,30 @@
+{
+    "version": 8,
+    "sources": {
+        "overlay": {
+          "type": "image",
+          "url": "./images/_court.jpg",
+          "coordinates": [
+            [-0.00068589196, 0.00015089623],
+            [0.00068589196, 0.00015089623],
+            [0.00068589196, -0.00242805755],
+            [-0.00068589196, -0.00242805755]
+          ]
+        }
+    },
+    "layers": [{
+        "id": "background",
+        "type": "background",
+        "interactive": true,
+        "paint": {
+            "background-color": "#ffffff"
+        }
+    },
+    {
+        "id": "overlay",
+        "source": "overlay",
+        "type": "raster",
+        "paint": {"raster-opacity":1}
+    }
+  ]
+}
