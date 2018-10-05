@@ -143,6 +143,6 @@ for year in years:
     get_shots(year, "Playoffs")
 
 #  Once we've cycled through all the years/seasons, write the payload to a csv
-with open('output.csv', 'w') as f:
+with open('shots.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerows(csv_payload)
