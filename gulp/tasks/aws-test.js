@@ -24,7 +24,11 @@ const awsDirectory = `test/${appName}/`;
 
 
 module.exports = () => {
-  const publisher = awspublish.create(awsJson);
+  const publisher = awspublish.create(Object.assign(awsJson, {
+    params: {
+      Bucket: 'interactives.dallasnews.com.test'
+    }
+  }));
 
   return gulp.src('./dist/**/*')
       .pipe(confirm({
