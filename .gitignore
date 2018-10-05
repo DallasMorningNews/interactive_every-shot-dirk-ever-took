@@ -180,7 +180,7 @@ dist/*
 src/images/opt
 
 # Original media assets
-src/assets/*
+src/assets/*.psd
 
 # ZIP files
 *.zip
