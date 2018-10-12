@@ -93,11 +93,16 @@ ul {
 }
 
 #shot-chart {
-    width: 1200px;
-    margin: 0 0;
-    height: calc((1200px / .61289831) / 2);
+    // width: 1200px;
+    // margin: 0 0;
+    // height: calc((1200px / .61289831) / 2);
+    // overflow: hidden;
+    // float: right;
+
+    width: 900px;
+    margin: 0 150px;
+    height: calc((900px / .61289831) / 2);
     overflow: hidden;
-    float: right;
 }
 
 .button-container {
@@ -209,7 +214,6 @@ THE SHOT CHART AND TOOLTIP
   left: 0;
   @include type(1.1rem, 1.5rem, 0);
   padding: 5px;
-  width: 200px;
   background-color: rgba(255,255,255,.9);
   width: 150px;
   span {
@@ -317,10 +321,11 @@ THE SHOT CHART AND TOOLTIP
   }
   #shot-chart {
     width: 900px;
-    height: calc((900px / .53389831) / 2);
+    height: calc((900px / .61289831) / 2);
+    margin: 0 0;
   }
   #dirk-scroller {
-    padding-top: calc((900px / .53389831) / 2);
+    padding-top: calc((900px / .61289831) / 2);
   }
   #dirk-graphic {
     &.locked {
@@ -346,10 +351,10 @@ THE SHOT CHART AND TOOLTIP
   #shot-chart {
     float: none;
     width: 95vw;
-    height: calc((95vw / .53389831) / 2);
+    height: calc((95vw / .61289831) / 2);
   }
   #dirk-scroller {
-    padding-top: calc((95vw / .53389831) / 2);
+    padding-top: calc((95vw / .61289831) / 2);
     position: relative;
   }
   #dirk-graphic {

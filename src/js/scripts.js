@@ -18,7 +18,7 @@ $(document).ready(() => {
   function getTeam(abv) {
     // arrays of team abbreviations and full names
     const teams = [
-      ['SEA', 'Seattle SuperSonices'],
+      ['SEA', 'Seattle SuperSonics'],
       ['GSW', 'Golden State Warriors'],
       ['SAS', 'San Antonio Spurs'],
       ['UTA', 'Utah Jazz'],
@@ -116,7 +116,7 @@ $(document).ready(() => {
   // const backne = new mapboxgl.LngLat(0.00068589196, -0.0011375806);
   // const backsw = new mapboxgl.LngLat(-0.00068589196, -0.00242805955);
 
-  const backne = new mapboxgl.LngLat(0.00088589196, -0.0009375806);
+  const backne = new mapboxgl.LngLat(0.00088589196, -0.0011375806);
   const backsw = new mapboxgl.LngLat(-0.00088589196, -0.00262805955);
 
   const halfcourtMaxBounds = new mapboxgl.LngLatBounds(sw, ne);
@@ -187,7 +187,7 @@ $(document).ready(() => {
         // grabbing the width of the tooltip. we'll use this to alter our tooltip
         // position when the tooltip will display on the right side of the screen.
         // this is to prevent the tooltip from going offscreen on far right points.
-        const ttWidth = $('#tooltip').outerWidth();
+        const ttWidth = 150;
 
         // use the clientX position in relation to the window width to position the
         // tooltip to the left or right of the point hovered over.
@@ -196,10 +196,15 @@ $(document).ready(() => {
           e.originalEvent.clientX - (ttWidth - 10) :
           e.originalEvent.clientX - 10;
         const yPos = e.originalEvent.clientY + 10;
-
         // set the position then display the tooltip
-        $('#tooltip').attr('style', `left: ${xPos}px; top: ${yPos}px`)
-          .removeClass('no-show');
+
+        if (e.originalEvent.clientY >= $(window).height() / 2) {
+          $('#tooltip').removeClass('no-show')
+            .attr('style', `left: ${xPos}px; top: ${yPos - $('#tooltip').outerHeight() - 20}px`);
+        } else {
+          $('#tooltip').attr('style', `left: ${xPos}px; top: ${yPos}px`)
+            .removeClass('no-show');
+        }
       } else {
         // if we're not currently over a point, hide the tooltip
         $('#tooltip').addClass('no-show');
@@ -221,6 +226,7 @@ $(document).ready(() => {
   */
 
   function prepareMap(data) {
+    dirkData = data;
     // determining whether we're dealing with small screen or not
     // const windowWidth = $(window).width();
     // const isSmallScreen = windowWidth <= 737;
@@ -311,14 +317,19 @@ $(document).ready(() => {
   INITIAL DATA CALL AND HAND OFF TO PREPARING THE MAP
   --------------------------------------------------------------------------------
   */
+  // https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson
 
-  $.getJSON('./data/dirk_geo_current.json', (data) => {
-    dirkData = data;
-    prepareMap(data);
-    // checkNumbersByYear(data);
-    // checkNumbersByGame('1998-99', data);
+  // $.getJSON('./data/dirk_geo_current.json', (data) => {
+  //   dirkData = data;
+  //   prepareMap(data);
+  // });
+
+  $.ajax({
+    url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson',
+    cache: false,
+    success: prepareMap,
+    dataType: 'json',
   });
-
 
   /*
   --------------------------------------------------------------------------------
@@ -480,8 +491,9 @@ $(document).ready(() => {
       type: 'FeatureCollection',
       features: [],
     };
+    console.log(dirkData.features);
     filteredData.features = dirkData.features.filter(
-      shot => shot.properties[filterKey] === filterValue,
+      shot => parseInt(shot.properties[filterKey], 10) === filterValue,
     );
 
     console.log(dirkData.features);
@@ -522,7 +534,7 @@ $(document).ready(() => {
 
     // grabs the filterValue from the .milestone clicked
     const filterValue = dirkCareer[i].milestone_id;
-
+    console.log(filterValue);
     // fade out and grey out the non-milestone shots
     map.setPaintProperty('dirkShots', 'circle-color', '#d7d7d7');
     map.setPaintProperty('dirkShots', 'circle-opacity', {
@@ -594,6 +606,7 @@ $(document).ready(() => {
 
     // if the currentMileston differs from the current milestoneMarker, we know
     // we've changed to a new milestone.
+
     if (currentMilestone !== milestoneMarker) {
       // if the currentMilestone isn't underfined ...
       if (currentMilestone !== undefined) {

@@ -10,11 +10,13 @@ import time
 years = ["1998-99", "1999-00", "2000-01", "2001-02", "2002-03", "2003-04", "2004-05", "2005-06", "2006-07", "2007-08", "2008-09", "2009-10", "2010-11", "2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17", "2017-18"]
 
 # headers info for requesting from the nba api
-HEADERS = {'user-agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) '
-                      'AppleWebKit/537.36 (KHTML, like Gecko) '
-                      'Chrome/45.0.2454.101 Safari/537.36'),
-       'referer': 'http://stats.nba.com/scores/'
-      }
+HEADERS = {
+        'user-agent': ('Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'), # noqa: E501
+        'Dnt': ('1'),
+        'Accept-Encoding': ('gzip, deflate, sdch'),
+        'Accept-Language': ('en'),
+        'origin': ('http://stats.nba.com')
+        }
 
 # placeholder list that will hold all the shot data for Dirk's career
 dirk = []
