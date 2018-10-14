@@ -3,11 +3,22 @@
 import $ from 'jquery';
 import dirkCareer from './career-tour';
 import './furniture';
+import careerGEOJSON from './career-shots';
+
+// Todo:
+// create a stripped down geojson file of just the milestones for use in the tour
+// remove shot id from TOOLTIP
+// reset the shot chart to full shots on end of scrolls
+// add in stats (will need full csv for this)
+// have dots come in as you progress on tour (ugh, maybe)
+// fever chart of scoring progression
+// some sort of prompt to push users down the pageAds
+// reset any filters when career tour begins
 
 $(document).ready(() => {
-
+  console.log(careerGEOJSON);
   // global variable to hold dirk's data so we can access it
-  let dirkData = [];
+  const dirkData = careerGEOJSON;
 
   let map;
 
@@ -90,6 +101,7 @@ $(document).ready(() => {
   // ===========================================================================
 
   function resetCircleProps() {
+    console.log('reset');
     map.setPaintProperty('dirkShots', 'circle-opacity', 0.5);
     map.setPaintProperty('dirkShots', 'circle-color', {
       property: 'r',
@@ -131,15 +143,19 @@ $(document).ready(() => {
   --------------------------------------------------------------------------------
   */
 
-  function drawMap(data) {
+  function drawMap() {
     map.addSource('dirkData', {
-      type: 'geojson',
-      data,
+      type: 'vector',
+      tiles: ['https://interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-proper/dirk-shots/{z}/{x}/{y}.pbf'],
+      minzoom: 0,
+      maxzoom: 14,
+      bounds: halfcourtMaxBounds,
     });
 
     map.addLayer({
       id: 'dirkShots',
       source: 'dirkData',
+      'source-layer': 'dirkshots',
       type: 'circle',
       paint: {
         'circle-radius': {
@@ -225,8 +241,8 @@ $(document).ready(() => {
   --------------------------------------------------------------------------------
   */
 
-  function prepareMap(data) {
-    dirkData = data;
+  function prepareMap() {
+    // dirkData = data;
     // determining whether we're dealing with small screen or not
     // const windowWidth = $(window).width();
     // const isSmallScreen = windowWidth <= 737;
@@ -250,7 +266,8 @@ $(document).ready(() => {
 
     // once the map has loaded, draw the map with dirk's data
     map.on('load', () => {
-      drawMap(data);
+      console.log('load');
+      drawMap();
     });
   }
 
@@ -324,13 +341,14 @@ $(document).ready(() => {
   //   prepareMap(data);
   // });
 
-  $.ajax({
-    url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson',
-    cache: false,
-    success: prepareMap,
-    dataType: 'json',
-  });
+  // $.ajax({
+  //   url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson',
+  //   cache: false,
+  //   success: prepareMap,
+  //   dataType: 'json',
+  // });
 
+  prepareMap();
   /*
   --------------------------------------------------------------------------------
   FILTERING THE DATA VIA

@@ -63,12 +63,4 @@ export default [
     note: 'Dirk scored his 30,000th point with a fadeaway jumper from the right baseline over the Lakers’ Larry Nance Jr., becoming the sixth player to join the 30,000 point club.',
     milestone_id: 25017,
   },
-  {
-    milestone: 'Final made basket',
-    milestone_type: 'shot',
-    date: 'April 3, 2018',
-    opponent: 'Portland Trailblazers',
-    note: 'Dirk’s final shot came in a 115-109 win over the Portland Trailblazers. With 56 seconds left in the third quarter, Dirk hit a 13-foot jumper, the last shot of his career.',
-    milestone_id: 25998,
-  },
 ];
