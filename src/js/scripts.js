@@ -3,11 +3,17 @@
 import $ from 'jquery';
 import dirkCareer from './career-tour';
 import './furniture';
+import DIRK_CAREER_DATA from './career-shots';
+// import checks from './check-numbers';
+
+// Todo:
+// remove shot id from TOOLTIP
+// add in stats (will need full csv for this)
+// have dots come in as you progress on tour (ugh, maybe)
+// some sort of prompt to push users down the page
 
 $(document).ready(() => {
-
-  // global variable to hold dirk's data so we can access it
-  let dirkData = [];
+  // global variable to hold dirk's career mileston data so we can access it for the career tour
 
   let map;
 
@@ -90,6 +96,7 @@ $(document).ready(() => {
   // ===========================================================================
 
   function resetCircleProps() {
+    console.log('reset');
     map.setPaintProperty('dirkShots', 'circle-opacity', 0.5);
     map.setPaintProperty('dirkShots', 'circle-color', {
       property: 'r',
@@ -99,7 +106,38 @@ $(document).ready(() => {
         [1, '#329ce8'],
       ],
     });
+
+    map.setPaintProperty('dirkShots', 'circle-radius', {
+      stops: [[17, 2], [18, 2.4], [19, 2.6], [22, 5]],
+    });
   }
+
+
+  // ===========================================================================
+  // PLAYING DIRK'S SHOTS IN SUCCESSION
+
+  // Progressively adds in Dirk's shots over time. Need to set up the UI for this.
+  // ===========================================================================
+
+  //
+  // function playTour(value) {
+  //   for (let i = value; i < 26000; i += 100) {
+  //     ((i) => {
+  //       setTimeout(() => {
+  //         map.setFilter('dirkShots', ['<=', 'id', i]);
+  //       }, 1 * i);
+  //     })(i);
+  //   }
+  // }
+  //
+  // $('body').click(() => {
+  //   map.setFilter('dirkShots', ['<=', 'id', 0]);
+  //   setTimeout(() => {
+  //     // map.setLayoutProperty('dirkShots', 'visibility', 'visible');
+  //     playTour(0);
+  //   }, 100);
+  // });
+
 
 
   // SETTING UP THE BOUNDRIES FOR THE MAP
@@ -109,7 +147,7 @@ $(document).ready(() => {
   // const sw = new mapboxgl.LngLat(-0.00068589196, -0.0011385806);
 
   const ne = new mapboxgl.LngLat(0.00088589196, 0.00020089623);
-  const sw = new mapboxgl.LngLat(-0.00088589196, -0.0013385806);
+  const sw = new mapboxgl.LngLat(-0.00088589196, -0.0011385806);
   // const sw = new mapboxgl.LngLat(-0.00088589196, -0.0014385806);
 
   // these coordinates ar wrong.
@@ -117,13 +155,12 @@ $(document).ready(() => {
   // const backsw = new mapboxgl.LngLat(-0.00068589196, -0.00242805955);
 
   const backne = new mapboxgl.LngLat(0.00088589196, -0.0011375806);
-  const backsw = new mapboxgl.LngLat(-0.00088589196, -0.00262805955);
+  const backsw = new mapboxgl.LngLat(-0.0008589196, -0.00262805955);
 
   const halfcourtMaxBounds = new mapboxgl.LngLatBounds(sw, ne);
   const backcourt = new mapboxgl.LngLatBounds(backsw, backne);
 
   let originalZoomLevel = 0;
-
 
   /*
   --------------------------------------------------------------------------------
@@ -131,15 +168,19 @@ $(document).ready(() => {
   --------------------------------------------------------------------------------
   */
 
-  function drawMap(data) {
+  function drawMap() {
     map.addSource('dirkData', {
-      type: 'geojson',
-      data,
+      type: 'vector',
+      tiles: ['https://interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-proper/dirk-shots/{z}/{x}/{y}.pbf'],
+      minzoom: 0,
+      maxzoom: 14,
+      bounds: halfcourtMaxBounds,
     });
 
     map.addLayer({
       id: 'dirkShots',
       source: 'dirkData',
+      'source-layer': 'dirkshots',
       type: 'circle',
       paint: {
         'circle-radius': {
@@ -225,8 +266,8 @@ $(document).ready(() => {
   --------------------------------------------------------------------------------
   */
 
-  function prepareMap(data) {
-    dirkData = data;
+  function prepareMap() {
+    // dirkData = data;
     // determining whether we're dealing with small screen or not
     // const windowWidth = $(window).width();
     // const isSmallScreen = windowWidth <= 737;
@@ -250,7 +291,8 @@ $(document).ready(() => {
 
     // once the map has loaded, draw the map with dirk's data
     map.on('load', () => {
-      drawMap(data);
+      console.log('load');
+      drawMap();
     });
   }
 
@@ -258,60 +300,6 @@ $(document).ready(() => {
   // **** end prepareMap ****
   // ---------------------------------
 
-
-  /*
-  --------------------------------------------------------------------------------
-  CHECKING THE NUMBERS (COMMENT THIS OUT FOR PRODUCTION)
-  --------------------------------------------------------------------------------
-  */
-
-  // function checkNumbersByYear(data) {
-  //   console.log(data);
-  //   const years = ['1998-99', '1999-00', '2000-01', '2001-02', '2002-03', '2003-04', '2004-05', '2005-06', '2006-07', '2007-08', '2008-09', '2009-10', '2010-11', '2011-12', '2012-13', '2013-14', '2014-15', '2015-16', '2016-17', '2017-18']
-  //
-  //   for (let i = 0; i < years.length; i += 1) {
-  //     const year = years[i];
-  //     let regularAttempts = 0;
-  //     let regularMakes = 0;
-  //     let postAttempts = 0;
-  //     let postMakes = 0;
-  //     data.features.forEach((shot) => {
-  //       if (shot.properties.y === year && shot.properties.se_type === 'Regular Season') {
-  //         regularAttempts += 1;
-  //         regularMakes += shot.properties.r === 0 ? 0 : 1;
-  //       } else if (shot.properties.y === year && shot.properties.se_type === 'Playoffs') {
-  //         postAttempts += 1;
-  //         postMakes += shot.properties.r === 0 ? 0 : 1;
-  //       }
-  //     });
-  //     console.log(year, 'Regular Season: ', regularMakes, '-', regularAttempts);
-  //     console.log(year, 'Postseason: ', postMakes, '-', postAttempts);
-  //   }
-  // }
-  //
-  // function checkNumbersByGame(year, data) {
-  //   const season = data.features.filter(game => game.properties.y === year);
-  //   console.log(season);
-  //
-  //   let gameID = 0;
-  //   let fga = 0;
-  //   let fgm = 0;
-  //   let gDate = '';
-  //
-  //   season.forEach((shot) => {
-  //     if (shot.properties.gid !== gameID) {
-  //       console.log(`${gDate}: ${fgm}-${fga}`);
-  //       fga = 1;
-  //       fgm = shot.properties.r === 0 ? 0 : 1;
-  //       gDate = shot.properties.gda;
-  //       gameID = shot.properties.gid;
-  //     } else {
-  //       fga += 1;
-  //       fgm += shot.properties.r === 0 ? 0 : 1;
-  //     }
-  //   });
-  //   console.log(`${gDate}: ${fgm}-${fga}`);
-  // }
   /*
   --------------------------------------------------------------------------------
   INITIAL DATA CALL AND HAND OFF TO PREPARING THE MAP
@@ -324,12 +312,14 @@ $(document).ready(() => {
   //   prepareMap(data);
   // });
 
-  $.ajax({
-    url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson',
-    cache: false,
-    success: prepareMap,
-    dataType: 'json',
-  });
+  // $.ajax({
+  //   url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson',
+  //   cache: false,
+  //   success: prepareMap,
+  //   dataType: 'json',
+  // });
+
+  prepareMap();
 
   /*
   --------------------------------------------------------------------------------
@@ -491,12 +481,12 @@ $(document).ready(() => {
       type: 'FeatureCollection',
       features: [],
     };
-    console.log(dirkData.features);
-    filteredData.features = dirkData.features.filter(
+    console.log(DIRK_CAREER_DATA.features);
+    filteredData.features = DIRK_CAREER_DATA.features.filter(
       shot => parseInt(shot.properties[filterKey], 10) === filterValue,
     );
 
-    console.log(dirkData.features);
+    console.log(DIRK_CAREER_DATA.features);
     console.log(filteredData);
     // adds those shots as a source to the shotchart
     map.addSource('dirkFilter', {
@@ -608,8 +598,12 @@ $(document).ready(() => {
     // we've changed to a new milestone.
 
     if (currentMilestone !== milestoneMarker) {
-      // if the currentMilestone isn't underfined ...
-      if (currentMilestone !== undefined) {
+      // if the currentMilestone isn't undefined ... and we're not at the end of the career tour
+      if (currentMilestone !== undefined && currentMilestone < dirkCareer.length) {
+        // clear off any filters that may have been set with the dropdown and reset the court
+        map.setFilter('dirkShots', ['all']);
+        resetCircleProps();
+
         // check to see if the user flipped the court before getting into the Milestones
         // if so, flip it back
         if (currentMilestone >= 0 && milestoneMarker === undefined && $('#court-flipper').hasClass('backcourt') === true) {
@@ -619,6 +613,10 @@ $(document).ready(() => {
         mapMilestone(currentMilestone);
         // hide the tooltip
         $('#tooltip').addClass('no-show');
+
+        // else, if we're at the end of the slideshow, reset the court to show all shots
+      } else if (currentMilestone > dirkCareer.length) {
+        resetCourt();
       } else {
         // if the currentMilestone is already defined when the milestone changes
         // it means we've scrolled back to the top and need to reset the court

@@ -32,3 +32,15 @@ _Important caveat:_ Video, audio and ZIP files are ignored by `git` regardless o
 ## Copyright
 
 &copy;2018 The Dallas Morning News
+
+using tippecanoe to get the mb tiles (note: change src data file to where aws data lives):
+tippecanoe -o dirk-shots.mbtiles -l dirkshots src/data/dirk_geo_current.json
+
+mb-util command to create pbf files:
+mb-util --image_format=pbf dirk-shots.mbtiles dirk-shots
+
+pushing pbf files to aws:
+s3cmd put dirk-shots s3://interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-proper/ \
+--acl-public --recursive --mime-type="application/x-protobuf" \
+--add-header="Content-Encoding:gzip" \
+--access_key={{access_key}} --secret_key={{secret_key}}
