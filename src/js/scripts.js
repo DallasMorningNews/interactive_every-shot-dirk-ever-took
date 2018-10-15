@@ -119,7 +119,7 @@ $(document).ready(() => {
   // Progressively adds in Dirk's shots over time. Need to set up the UI for this.
   // ===========================================================================
 
-  //
+  // 
   // function playTour(value) {
   //   for (let i = value; i < 26000; i += 100) {
   //     ((i) => {
