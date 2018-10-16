@@ -13,6 +13,7 @@ export default function (statsObj, data) {
   const year = statsObj.y;
 
   // first check to see if there are no filters selected
+  // if not, figure his all time FG-FGA and popuplate the statline accordingly
   if (seasonType === null && opponent === null && range === null && year === null) {
     let madeShots = 0;
     data.forEach((shot) => {
@@ -20,12 +21,18 @@ export default function (statsObj, data) {
         madeShots += 1;
       }
     });
+    // reset the smart text
+    $('#statline span').addClass('no-show');
+    // update the smart text
     $('.statline__fgs').html(`<strong>${numberWithCommas(madeShots)}</strong> for <strong>${numberWithCommas(data.length + 1)}</strong> from the field for his career`).removeClass('no-show');
     return;
   }
 
+  // our placeholder for our filtered data as we take note of selections made by the user
   let filteredData;
 
+  // first check to see if our season type has been changed. if it has, update the smart
+  // text and make a first pass at the filtered data
   if (seasonType !== null) {
     filteredData = data.filter(shot => shot.season_type === seasonType);
     $('.statline__season').removeClass('no-show').html(` in the <strong>${seasonType}</strong>`);
@@ -34,9 +41,10 @@ export default function (statsObj, data) {
     filteredData = data;
   }
 
+  // next, check if an opponent has been selected. if so, filter the data accordingly,
+  // pluck out the long name of the opponent, and update the smart text
   if (opponent !== null) {
     filteredData = filteredData.filter(shot => shot.opponent === opponent);
-    console.log(opponent);
     let fullTeam;
     TEAMS.forEach((team) => {
       if (opponent === team[0]) {
@@ -48,6 +56,8 @@ export default function (statsObj, data) {
     $('.statline__opponent').addClass('no-show');
   }
 
+  // check if a range has been selected. if so, filter accordingly, clean up the ft./feet
+  // listed in the range, and update the smart text
   if (range !== null) {
     filteredData = filteredData.filter(shot => shot.shot_range === range);
     $('.statline__range').removeClass('no-show').html(` from <strong>${range.replace('ft.', 'feet')}</strong>`);
@@ -55,6 +65,7 @@ export default function (statsObj, data) {
     $('.statline__range').removeClass('no-show').text(' from the field');
   }
 
+  // check if a year has been selected. if so, filter accordingly and update the smart text
   if (year !== null) {
     filteredData = filteredData.filter(shot => shot.year === year);
     $('.statline__year').removeClass('no-show').html(` in <strong>${year}</strong>`);
@@ -62,18 +73,21 @@ export default function (statsObj, data) {
     $('.statline__year').addClass('no-show');
   }
 
+  // nba.com's stats api is missing a shot for dirk, so we add it in by default
   let totalShots = filteredData.length + 1;
 
+  // then we check if an opponent has been selected. if it has, and it's not denver, subtract that shot
   if (opponent !== null && opponent !== 'DEN') {
     totalShots -= 1;
+  // if a year's been selected and it's not the season where the missing shot happened, subtract that shot
   } else if (year !== null || year !== '1998-99') {
     totalShots -= 1;
+  // if a season type is selected, and it's not the regular season, subtract that shot
   } else if (seasonType !== null || seasonType !== 'Regular Season') {
     totalShots -= 1;
   }
 
-  console.log(filteredData);
-
+  // iterate over the filtered data and count up our made shots
   let madeShots = 0;
   filteredData.forEach((shot) => {
     if (shot.result === 'Made Shot') {
@@ -81,5 +95,6 @@ export default function (statsObj, data) {
     }
   });
 
+  // update the smart text with his filtered FG-FGA
   $('.statline__fgs').html(`<strong>${numberWithCommas(madeShots)}</strong> for <strong>${numberWithCommas(totalShots)}</strong>`).removeClass('no-show');
 }
