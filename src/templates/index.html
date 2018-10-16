@@ -139,7 +139,7 @@ googletag.cmd.push(function () {
     <p>On Wednesday, Oct. 17, a career that began 19 years and more than 25,000 shots ago will start what is likely to be its swan song, as Dirk Nowitzki and the Dallas Mavericks kick off their 2018-19 season.</p>
     <p>Over that time, Dirk has become the embodiement of the Dallas Mavericks, leading the team to two NBA Finals — including the franchise’s first championship in 2011 — and collecing NBA MVP and Finals MVP awards along the way.</p>
     <p>Nowitzki has made the most of his time on the court. Few could have seen that the lanky German with the goofy haircut that was introduced to Mavericks fans in 1998 would go on to become the sixth highest scoring player in NBA history. With a healthy season, Nowitzki may sit a few notches higher on that list before it’s all said and done, as both Wilt Chamberlain (5th) and Michael Jordan (4th) are within reach.</p>
-    <p>And while Father Time has caught up with the Big German, slowing his pace up and down the court, it hasn’t tarnished what will be a career long remembered in Dallas. Take some time and explore that career below, or keep scrolling to see some of Nowitzki’s career highlights: </p>
+    <p>And while Father Time has caught up with the Big German, slowing his pace up and down the court, it hasn’t tarnished what has been a legendary career in Dallas. Take some time and explore his career below, or keep scrolling to see some of Nowitzki’s career highlights. </p>
   </div>
 
   <div id="dirk-graphic-container" class="clearfix">
@@ -147,15 +147,15 @@ googletag.cmd.push(function () {
     <div id="filters" class="clearfix">
 
       <div class="controls clearfix" id="controls__explore">
-        <div class="filter__container">
-          <select id="r">
-            <option value="all">Made and Missed</option>
-            <option value="1">Made shots</option>
-            <option value="0">Missed shots</option>
+        <div class="filter__container no-show">
+          <select id="se_type">
+            <option value="all">All seasons</option>
+            <option value="Regular Season">Regular season</option>
+            <option value="Playoffs">Playoffs</option>
           </select>
         </div>
 
-        <div class="filter__container">
+        <div class="filter__container no-show">
           <select id="opp">
             <option value="all">All opponents</option>
             <option value="ATL">Atlanta Hawks</option>
@@ -195,7 +195,7 @@ googletag.cmd.push(function () {
           </select>
         </div>
 
-        <div class="filter__container">
+        <div class="filter__container no-show">
           <select id="sr">
             <option value="all">Any range</option>
             <option value="Less Than 8 ft.">Less than 8 feet</option>
@@ -206,7 +206,7 @@ googletag.cmd.push(function () {
           </select>
         </div>
 
-        <div class="filter__container">
+        <div class="filter__container no-show">
           <select id="y">
             <option value="all">Any year</option>
             <option value="1998-99">1998 - 1999</option>
@@ -238,19 +238,16 @@ googletag.cmd.push(function () {
         <button id="court-flipper" class="int-btn frontcourt">Backcourt</button>
         <button id="court-reset" class="int-btn">Reset</button>
       </div>
-
+      <div id="dirk-legend"><span class="shot-made">Made</span> <span class="shot-missed">Missed</span></div>
+      <p id="statline">Nowitzki is <span class="statline__fgs no-show"></span><span class="statline__range no-show"></span><span class="statline__season no-show"></span><span class="statline__opponent no-show"></span><span class="statline__year no-show"></span>. </p>
     </div>
+
   <div id="dirk-scroller">
     <div id="dirk-graphic" class="clearfix">
-      <div id="dirk-legend"><span class="shot-made">Made</span> <span class="shot-missed">Missed</span></div>
       <div id="shot-chart"></div>
       <div id="tooltip" class="no-show">
-        <p><strong>Date: </strong><span id="tt-date"></span></p>
-        <p><strong>Opp.: </strong><span id="tt-opp"></span></p>
-        <p><strong>Result: </strong><span id="tt-result"></span></p>
-        <p><strong>Type: </strong><span id="tt-type"></span></p>
-        <p><strong>Distance: </strong><span id="tt-distance"></span></p>
-        <p><strong>Shot ID: </strong><span id="tt-id"></span></p>
+        <p><strong><span id="tt-date"></span></strong>: <span id="tt-result"></span> <span id="tt-type"></span> from <span id="tt-distance"></span> against the <span id="tt-opp"></span>.</p>
+        <!-- <p><strong>Shot ID: </strong><span id="tt-id"></span></p> -->
       </div>
     </div>
 

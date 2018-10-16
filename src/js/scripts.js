@@ -1,20 +1,26 @@
 /* global document:true, mapboxgl: true, window: true */
 
 import $ from 'jquery';
-import dirkCareer from './career-tour';
-import './furniture';
+import * as d3 from 'd3-dsv';
+
+import MILESTONES from './career-tour';
 import DIRK_CAREER_DATA from './career-shots';
+import correctDate from './correct-dates';
+import updateStats from './update-stats';
+import TEAMS from './teams';
+import './furniture';
+
+
 // import checks from './check-numbers';
 
 // Todo:
-// remove shot id from TOOLTIP
 // add in stats (will need full csv for this)
-// have dots come in as you progress on tour (ugh, maybe)
+// have dots come in as you progress on tour (ugh, maybe) with year
 // some sort of prompt to push users down the page
 
 $(document).ready(() => {
   // global variable to hold dirk's career mileston data so we can access it for the career tour
-
+  let dirkAllShots;
   let map;
 
   // ================================================
@@ -23,48 +29,12 @@ $(document).ready(() => {
 
   function getTeam(abv) {
     // arrays of team abbreviations and full names
-    const teams = [
-      ['SEA', 'Seattle SuperSonics'],
-      ['GSW', 'Golden State Warriors'],
-      ['SAS', 'San Antonio Spurs'],
-      ['UTA', 'Utah Jazz'],
-      ['HOU', 'Houston Rockets'],
-      ['DEN', 'Denver Nuggets'],
-      ['VAN', 'Vancouver Grizzlies'],
-      ['POR', 'Portland Trailblazers'],
-      ['LAL', 'Los Angeles Lakers'],
-      ['LAC', 'Los Angeles Clippers'],
-      ['PHX', 'Phoenix Suns'],
-      ['ATL', 'Atlanta Hawks'],
-      ['SAC', 'Sacramento Kings'],
-      ['ORL', 'Orlando Magic'],
-      ['NJN', 'New Jersey Nets'],
-      ['DET', 'Detroit Pistons'],
-      ['MIN', 'Minnesota Timberwolves'],
-      ['MIA', 'Miami Heat'],
-      ['CHI', 'Chicago Bulls'],
-      ['CHH', 'Charlotte Hornets'],
-      ['NYK', 'New York Knicks'],
-      ['CLE', 'Cleveland Cavaliers'],
-      ['MIL', 'Milwaukee Bucks'],
-      ['TOR', 'Toronto Raptors'],
-      ['WAS', 'Washington Wizards'],
-      ['PHI', 'Philadelphia 76ers'],
-      ['IND', 'Indiana Pacers'],
-      ['BOS', 'Boston Celtics'],
-      ['MEM', 'Memphis Grizzlies'],
-      ['NOH', 'New Orleans Hornets'],
-      ['CHA', 'Charlotte Bobcats'],
-      ['OKC', 'Oklahoma City Thunder'],
-      ['BKN', 'Brooklyn Nets'],
-      ['NOP', 'New Orleans Pelicans'],
-    ];
-
+    
     let team = '';
 
     // iterate through each team abbreviation/name array and see if it includes
     // the passed abbreviation
-    $.each(teams, (k, v) => {
+    $.each(TEAMS, (k, v) => {
       if (v.includes(abv)) {
         // if it does, assign the full team name to the team variable
         team = v[1];
@@ -119,7 +89,7 @@ $(document).ready(() => {
   // Progressively adds in Dirk's shots over time. Need to set up the UI for this.
   // ===========================================================================
 
-  // 
+  //
   // function playTour(value) {
   //   for (let i = value; i < 26000; i += 100) {
   //     ((i) => {
@@ -216,19 +186,29 @@ $(document).ready(() => {
         const f = features[0].properties;
 
         // populate the tooltip with that feature's data
-        $('#tt-date').text(f.gda.toLowerCase());
+        $('#tt-date').text(correctDate(f.gda.toLowerCase()));
         // we hand off the opponent abbreviation to our getTeam function, which returns
         // the actual full team name
         $('#tt-opp').text(getTeam(f.opp));
-        $('#tt-result').text(f.r === 1 ? 'Made shot' : 'Missed shot');
+        $('#tt-result').text(f.r === 1 ? 'Made' : 'Missed');
         $('#tt-type').text(f.st);
-        $('#tt-distance').text(f.sd);
-        $('#tt-id').text(f.id);
+        $('#tt-distance').text(f.sd === 1 ? '1 foot' : `${f.sd} feet`);
+
+        // un-comment this line to add shot ids back to tooltip.
+        // This should be done for development only.
+        // $('#tt-id').text(f.id);
+
+        // add a made/missed designator preceeding the date
+        if (f.r === 1) {
+          $('#tt-date').removeClass('tt--missed').addClass('tt--made');
+        } else {
+          $('#tt-date').removeClass('tt--made').addClass('tt--missed');
+        }
 
         // grabbing the width of the tooltip. we'll use this to alter our tooltip
         // position when the tooltip will display on the right side of the screen.
         // this is to prevent the tooltip from going offscreen on far right points.
-        const ttWidth = 150;
+        const ttWidth = 200;
 
         // use the clientX position in relation to the window width to position the
         // tooltip to the left or right of the point hovered over.
@@ -296,6 +276,8 @@ $(document).ready(() => {
     });
   }
 
+  prepareMap();
+
   // ---------------------------------
   // **** end prepareMap ****
   // ---------------------------------
@@ -312,14 +294,19 @@ $(document).ready(() => {
   //   prepareMap(data);
   // });
 
-  // $.ajax({
-  //   url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson',
-  //   cache: false,
-  //   success: prepareMap,
-  //   dataType: 'json',
-  // });
+  function prepareFilters(data) {
+    console.log(data);
+    dirkAllShots = d3.csvParse(data);
+    $('.filter__container').removeClass('no-show');
+    updateStats({ se_type: null, opp: null, sr: null, y: null }, dirkAllShots);
+  }
 
-  prepareMap();
+  $.ajax({
+    url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.csv',
+    cache: false,
+    success: prepareFilters,
+    dataType: 'text',
+  });
 
   /*
   --------------------------------------------------------------------------------
@@ -369,6 +356,8 @@ $(document).ready(() => {
     // selected option, which is the value of the filtered key. Create a mapboxgl.js
     // filter array, and push it to our filters array
 
+    const statFilters = {};
+
     $.each($('.filter__container'), function () {
       if ($(this).children('select').val() !== 'all') {
         const filterKey = $(this).children('select').attr('id');
@@ -380,10 +369,15 @@ $(document).ready(() => {
         }
         const filter = ['==', filterKey, filterValue];
         filters.push(filter);
+        statFilters[filterKey] = filterValue;
+      } else {
+        const filterKey = $(this).children('select').attr('id');
+        statFilters[filterKey] = null;
       }
     });
 
     filterData(filters);
+    updateStats(statFilters, dirkAllShots);
   });
 
 
@@ -434,6 +428,9 @@ $(document).ready(() => {
   // ===========================================================================
 
   function resetCourt() {
+    // reset stats line
+    updateStats({ se_type: null, opp: null, sr: null, y: null }, dirkAllShots);
+
     // flip the nav back to explore mode
     $('.controls').addClass('no-show');
     $('#controls__explore').removeClass('no-show');
@@ -520,10 +517,10 @@ $(document).ready(() => {
 
   function mapMilestone(i) {
     // sets a filter key based on the milestone type
-    const filterKey = dirkCareer[i].milestone_type === 'shot' ? 'id' : 'gid';
+    const filterKey = MILESTONES[i].milestone_type === 'shot' ? 'id' : 'gid';
 
     // grabs the filterValue from the .milestone clicked
-    const filterValue = dirkCareer[i].milestone_id;
+    const filterValue = MILESTONES[i].milestone_id;
     console.log(filterValue);
     // fade out and grey out the non-milestone shots
     map.setPaintProperty('dirkShots', 'circle-color', '#d7d7d7');
@@ -599,7 +596,7 @@ $(document).ready(() => {
 
     if (currentMilestone !== milestoneMarker) {
       // if the currentMilestone isn't undefined ... and we're not at the end of the career tour
-      if (currentMilestone !== undefined && currentMilestone < dirkCareer.length) {
+      if (currentMilestone !== undefined && currentMilestone < MILESTONES.length) {
         // clear off any filters that may have been set with the dropdown and reset the court
         map.setFilter('dirkShots', ['all']);
         resetCircleProps();
@@ -615,7 +612,7 @@ $(document).ready(() => {
         $('#tooltip').addClass('no-show');
 
         // else, if we're at the end of the slideshow, reset the court to show all shots
-      } else if (currentMilestone > dirkCareer.length) {
+      } else if (currentMilestone > MILESTONES.length) {
         resetCourt();
       } else {
         // if the currentMilestone is already defined when the milestone changes
