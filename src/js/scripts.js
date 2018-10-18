@@ -29,7 +29,7 @@ $(document).ready(() => {
 
   function getTeam(abv) {
     // arrays of team abbreviations and full names
-    
+
     let team = '';
 
     // iterate through each team abbreviation/name array and see if it includes

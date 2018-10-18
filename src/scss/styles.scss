@@ -30,47 +30,85 @@ ul {
   z-index: 100;
   position: relative;
   margin-top: 2.4rem !important;
-  width: 95% !important;
+  width: 90% !important;
   h1 {
     font-weight: 800;
     font-family: $sans;
     text-transform: uppercase;
-    font-size: 10rem !important;
-    margin-top: -105px;
-    line-height: 10rem !important;
-    letter-spacing: -5px !important;
+    font-size: 20rem;
+    margin-top: -175px;
+    line-height: 10rem;
+    letter-spacing: -5px;
+    margin-bottom: 6rem;
+    color: $black33;
+    position: relative;
+    z-index: 10;
+  }
+  h2 {
+    margin-bottom: 4.8rem;
+  }
+}
+
+@keyframes dirk {
+  from {
+    opacity: 0;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
   }
 }
 
 .hero-knockout {
-  max-width: 100px;
+  max-width: 200px;
   position: relative;
-  z-index: 100;
+  z-index: 0;
+  animation-name: dirk;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  top: -50px;
+  width: 100%;
+}
+
+
+@media (max-width: 1100px) {
+  .floater-head {
+    h1 {
+      font-size: 15rem;
+    }
+  }
+  .hero-knockout {
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 860px) {
   .floater-head h1 {
-    font-size: 7rem !important;
-    line-height: 7rem !important;
-    margin-top: -75px;
+    font-size: 10rem;
+    line-height: 7rem;
+    margin-top:-125px;
   }
   .hero-knockout {
-    max-width: 80px;
+    max-width: 150px;
   }
 
 }
 @media (max-width: 500px) {
   .floater-head h1 {
-    font-size: 6rem !important;
-    line-height: 6rem !important;
-    margin-top: -65px;
+    font-size: 7rem;
+    line-height: 6rem;
+    letter-spacing: -3px;
+    margin-top: -125px;
   }
   .floater-head h2 {
     font-size: 2rem !important;
     line-height: 2.4rem !important;
+
   }
   .hero-knockout {
-    max-width: 70px;
+    max-width: 150px;
   }
 }
 
@@ -266,6 +304,7 @@ THE SHOT CHART AND TOOLTIP
     cursor: pointer;
     padding: 0 0;
     margin-right: 2%;
+    font-weight: 400;
     &:last-of-type {
       margin-right: 0;
     }
@@ -326,11 +365,13 @@ THE SHOT CHART AND TOOLTIP
     border: 1px solid $black235;
     box-shadow: 2px 2px 4px rgba($black121, .25), -2px 2px 4px rgba($black121, .25), 2px -2px 4px rgba($black121, .25), -2px -2px 4px rgba($black121, .25);
     padding: 20px;
-    h6 {
+    h5 {
       font-weight: 700;
     }
     p {
       @include type(1.4rem, 1.8rem, .6rem);
+      font-weight: 400;
+      color: $black33;
       &:first-of-type {
         font-weight: 700;
       }
