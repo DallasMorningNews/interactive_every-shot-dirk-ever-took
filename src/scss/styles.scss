@@ -296,7 +296,6 @@ THE SHOT CHART AND TOOLTIP
     background-color: $black245;
     border: 1px solid $black215;
     color: $black33;
-    font-weight: 100;
     width: 49%;
     float: left;
     min-width: 1px;
@@ -347,6 +346,29 @@ THE SHOT CHART AND TOOLTIP
   }
 }
 
+@keyframes bouncy {
+  0% {top: 0;}
+  20% {top: 20px;}
+  40% {top: 0;}
+  100% {top: 0;}
+}
+
+.scroll-indicator {
+  display: block;
+  margin: 4.8rem auto 0;
+  width: 20px;
+  height: 20px;
+  border-right: 5px solid $black215;
+  border-bottom: 5px solid $black215;
+  border-radius: 3px;
+  position: relative;
+  transform: rotate(45deg);
+  animation: bouncy 3s infinite;
+  position: relative;
+  top: 0;
+}
+
+
 .scroll-slide {
   min-height: 900px;
   position: relative;
@@ -376,7 +398,7 @@ THE SHOT CHART AND TOOLTIP
         font-weight: 700;
       }
       &.explore__text {
-        font-weight: 100;
+        font-weight: 400;
         a:visited {
           color: $dmnblue;
         }

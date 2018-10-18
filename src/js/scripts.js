@@ -4,10 +4,11 @@ import $ from 'jquery';
 import * as d3 from 'd3-dsv';
 
 import MILESTONES from './career-tour';
-import DIRK_CAREER_DATA from './career-shots';
+import MILESTONE_SHOTS from './career-shots';
 import correctDate from './correct-dates';
-import updateStats from './update-stats';
 import TEAMS from './teams';
+import updateStats from './update-stats';
+
 import './furniture';
 
 
@@ -247,11 +248,6 @@ $(document).ready(() => {
   */
 
   function prepareMap() {
-    // dirkData = data;
-    // determining whether we're dealing with small screen or not
-    // const windowWidth = $(window).width();
-    // const isSmallScreen = windowWidth <= 737;
-
     // our new map object, with the target container, the bounds (which are the coordinates
     // of our court, and the styles that apply the court background)
     map = new mapboxgl.Map({
@@ -284,15 +280,9 @@ $(document).ready(() => {
 
   /*
   --------------------------------------------------------------------------------
-  INITIAL DATA CALL AND HAND OFF TO PREPARING THE MAP
+  INITIAL DATA CALL AND HAND OFF TO PREPARING THE FILTERS
   --------------------------------------------------------------------------------
   */
-  // https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.geojson
-
-  // $.getJSON('./data/dirk_geo_current.json', (data) => {
-  //   dirkData = data;
-  //   prepareMap(data);
-  // });
 
   function prepareFilters(data) {
     console.log(data);
@@ -472,19 +462,17 @@ $(document).ready(() => {
     // remove any milestone layers and sources already present on the shot chart
     removeMilestones();
 
-    console.log(filterValue, filterKey);
     // create a new geojson variable of just the shots that match the milestone
     const filteredData = {
       type: 'FeatureCollection',
       features: [],
     };
-    console.log(DIRK_CAREER_DATA.features);
-    filteredData.features = DIRK_CAREER_DATA.features.filter(
+
+    // add in the shots that match the milestone
+    filteredData.features = MILESTONE_SHOTS.features.filter(
       shot => parseInt(shot.properties[filterKey], 10) === filterValue,
     );
 
-    console.log(DIRK_CAREER_DATA.features);
-    console.log(filteredData);
     // adds those shots as a source to the shotchart
     map.addSource('dirkFilter', {
       type: 'geojson',
@@ -565,6 +553,7 @@ $(document).ready(() => {
     if (scrollTop > lockStart && scrollTop + chartHeight < lockEnd) {
       $('#dirk-graphic').addClass('locked');
       $('#dirk-graphic').removeClass('locked-bottom');
+      $('.scroll-indicator').addClass('no-show');
     } else if (scrollTop + chartHeight > lockEnd) {
       // else, if the scroll is past the end waypoint, lock the court into
       // the bottom of the scroller, allowing it to scroll up with the page
