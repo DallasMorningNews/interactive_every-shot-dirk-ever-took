@@ -335,6 +335,7 @@ $(document).ready(() => {
     }, 250);
   }
 
+
   // run the filterData function anytime a .filter__container select is changed
   $('.filter__container select').change(() => {
     // starting off our filtering array. "all" is our filtering operator
@@ -368,6 +369,22 @@ $(document).ready(() => {
 
     filterData(filters);
     updateStats(statFilters, dirkAllShots);
+  });
+
+  // clicking a predefined filter set
+  $('.explorer').click(function () {
+    // reset the court
+    resetCourt();
+    // pluck the particular shotSet from the explorer element's id
+    const shotSet = $(this).attr('id');
+    // if 'spurs', show only shots versus the spurs
+    if (shotSet === 'spurs') {
+      $('#opp').val('SAS').trigger('change');
+    // else if 'title', show shots from the 2010-11 postseason
+    } else if (shotSet === 'title') {
+      $('#se_type').val('Playoffs');
+      $('#y').val('2010-11').trigger('change');
+    }
   });
 
 
@@ -435,7 +452,7 @@ $(document).ready(() => {
     map.setMaxBounds(halfcourtMaxBounds).setZoom(originalZoomLevel);
 
     // restore all the dropdowns to their original defaults
-    $('#r').val($('#r option:first').val());
+    $('#se_type').val($('#se_type option:first').val());
     $('#opp').val($('#opp option:first').val());
     $('#sr').val($('#sr option:first').val());
     $('#y').val($('#y option:first').val());

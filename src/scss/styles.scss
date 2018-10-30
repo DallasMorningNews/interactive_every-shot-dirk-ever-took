@@ -112,7 +112,11 @@ ul {
   }
 }
 
-
+.explorer {
+  font-weight: 700;
+  color: $dmnblue;
+  cursor: pointer;
+}
 #dirk-graphic-container {
   width: 95%;
   max-width: 1200px;
