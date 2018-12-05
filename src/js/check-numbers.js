@@ -6,7 +6,7 @@ CHECKING THE NUMBERS (COMMENT THIS OUT FOR PRODUCTION)
 
 function checkNumbersByYear(data) {
   console.log(data);
-  const years = ['1998-99', '1999-00', '2000-01', '2001-02', '2002-03', '2003-04', '2004-05', '2005-06', '2006-07', '2007-08', '2008-09', '2009-10', '2010-11', '2011-12', '2012-13', '2013-14', '2014-15', '2015-16', '2016-17', '2017-18']
+  const years = ['1998-99', '1999-00', '2000-01', '2001-02', '2002-03', '2003-04', '2004-05', '2005-06', '2006-07', '2007-08', '2008-09', '2009-10', '2010-11', '2011-12', '2012-13', '2013-14', '2014-15', '2015-16', '2016-17', '2017-18'];
 
   for (let i = 0; i < years.length; i += 1) {
     const year = years[i];
@@ -14,13 +14,13 @@ function checkNumbersByYear(data) {
     let regularMakes = 0;
     let postAttempts = 0;
     let postMakes = 0;
-    data.features.forEach((shot) => {
-      if (shot.properties.y === year && shot.properties.se_type === 'Regular Season') {
+    data.forEach((shot) => {
+      if (shot.year === year && shot.season_type === 'Regular Season') {
         regularAttempts += 1;
-        regularMakes += shot.properties.r === 0 ? 0 : 1;
-      } else if (shot.properties.y === year && shot.properties.se_type === 'Playoffs') {
+        regularMakes += shot.result === 'Missed Shot' ? 0 : 1;
+      } else if (shot.year === year && shot.season_type === 'Playoffs') {
         postAttempts += 1;
-        postMakes += shot.properties.r === 0 ? 0 : 1;
+        postMakes += shot.result === 'Missed Shot' ? 0 : 1;
       }
     });
     console.log(year, 'Regular Season: ', regularMakes, '-', regularAttempts);

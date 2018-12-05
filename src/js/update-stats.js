@@ -2,7 +2,6 @@ import $ from 'jquery';
 import TEAMS from './teams';
 
 export default function (statsObj, data) {
-  console.log(data);
   // function to add commas into numbers that are larger than 999
   const numberWithCommas = x => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
@@ -24,7 +23,7 @@ export default function (statsObj, data) {
     // reset the smart text
     $('#statline span').addClass('no-show');
     // update the smart text
-    $('.statline__fgs').html(`<strong>${numberWithCommas(madeShots)}</strong> for <strong>${numberWithCommas(data.length + 1)}</strong> from the field for his career`).removeClass('no-show');
+    $('.statline__fgs').html(`<strong>${numberWithCommas(madeShots)}</strong> for <strong>${numberWithCommas(data.length)}</strong> from the field for his career`).removeClass('no-show');
     return;
   }
 
@@ -73,20 +72,6 @@ export default function (statsObj, data) {
     $('.statline__year').addClass('no-show');
   }
 
-  // nba.com's stats api is missing a shot for dirk, so we add it in by default
-  let totalShots = filteredData.length + 1;
-
-  // then we check if an opponent has been selected. if it has, and it's not denver, subtract that shot
-  if (opponent !== null && opponent !== 'DEN') {
-    totalShots -= 1;
-  // if a year's been selected and it's not the season where the missing shot happened, subtract that shot
-  } else if (year !== null || year !== '1998-99') {
-    totalShots -= 1;
-  // if a season type is selected, and it's not the regular season, subtract that shot
-  } else if (seasonType !== null || seasonType !== 'Regular Season') {
-    totalShots -= 1;
-  }
-
   // iterate over the filtered data and count up our made shots
   let madeShots = 0;
   filteredData.forEach((shot) => {
@@ -96,5 +81,5 @@ export default function (statsObj, data) {
   });
 
   // update the smart text with his filtered FG-FGA
-  $('.statline__fgs').html(`<strong>${numberWithCommas(madeShots)}</strong> for <strong>${numberWithCommas(totalShots)}</strong>`).removeClass('no-show');
+  $('.statline__fgs').html(`<strong>${numberWithCommas(madeShots)}</strong> for <strong>${numberWithCommas(filteredData.length)}</strong>`).removeClass('no-show');
 }
