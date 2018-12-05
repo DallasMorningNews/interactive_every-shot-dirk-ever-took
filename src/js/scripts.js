@@ -11,13 +11,10 @@ import updateStats from './update-stats';
 
 import './furniture';
 
-
+// to check the season-by-season or game-by-game totals, un-comment the below
+// then parse the csv and pass the data to checks
 // import checks from './check-numbers';
 
-// Todo:
-// add in stats (will need full csv for this)
-// have dots come in as you progress on tour (ugh, maybe) with year
-// some sort of prompt to push users down the page
 
 $(document).ready(() => {
   // global variable to hold dirk's career mileston data so we can access it for the career tour
@@ -67,7 +64,6 @@ $(document).ready(() => {
   // ===========================================================================
 
   function resetCircleProps() {
-    console.log('reset');
     map.setPaintProperty('dirkShots', 'circle-opacity', 0.5);
     map.setPaintProperty('dirkShots', 'circle-color', {
       property: 'r',
@@ -83,47 +79,10 @@ $(document).ready(() => {
     });
   }
 
-
-  // ===========================================================================
-  // PLAYING DIRK'S SHOTS IN SUCCESSION
-
-  // Progressively adds in Dirk's shots over time. Need to set up the UI for this.
-  // ===========================================================================
-
-  //
-  // function playTour(value) {
-  //   for (let i = value; i < 26000; i += 100) {
-  //     ((i) => {
-  //       setTimeout(() => {
-  //         map.setFilter('dirkShots', ['<=', 'id', i]);
-  //       }, 1 * i);
-  //     })(i);
-  //   }
-  // }
-  //
-  // $('body').click(() => {
-  //   map.setFilter('dirkShots', ['<=', 'id', 0]);
-  //   setTimeout(() => {
-  //     // map.setLayoutProperty('dirkShots', 'visibility', 'visible');
-  //     playTour(0);
-  //   }, 100);
-  // });
-
-
-
   // SETTING UP THE BOUNDRIES FOR THE MAP
-
-  // the goal dirk is shooting at is at 0, 0 long/lat
-  // const ne = new mapboxgl.LngLat(0.00068589196, 0.00015089623);
-  // const sw = new mapboxgl.LngLat(-0.00068589196, -0.0011385806);
 
   const ne = new mapboxgl.LngLat(0.00088589196, 0.00020089623);
   const sw = new mapboxgl.LngLat(-0.00088589196, -0.0011385806);
-  // const sw = new mapboxgl.LngLat(-0.00088589196, -0.0014385806);
-
-  // these coordinates ar wrong.
-  // const backne = new mapboxgl.LngLat(0.00068589196, -0.0011375806);
-  // const backsw = new mapboxgl.LngLat(-0.00068589196, -0.00242805955);
 
   const backne = new mapboxgl.LngLat(0.00088589196, -0.0011375806);
   const backsw = new mapboxgl.LngLat(-0.0008589196, -0.00262805955);
@@ -168,8 +127,6 @@ $(document).ready(() => {
         'circle-opacity': 0.5,
       },
     });
-
-    // settingBounds();
 
     // mousing over a shot location
     map.on('mousemove', (e) => {
@@ -267,7 +224,6 @@ $(document).ready(() => {
 
     // once the map has loaded, draw the map with dirk's data
     map.on('load', () => {
-      console.log('load');
       drawMap();
     });
   }
@@ -285,14 +241,13 @@ $(document).ready(() => {
   */
 
   function prepareFilters(data) {
-    console.log(data);
     dirkAllShots = d3.csvParse(data);
     $('.filter__container').removeClass('no-show');
     updateStats({ se_type: null, opp: null, sr: null, y: null }, dirkAllShots);
   }
 
   $.ajax({
-    url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots.csv',
+    url: 'https://s3.amazonaws.com/interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-raw/dirk-shots.csv',
     cache: false,
     success: prepareFilters,
     dataType: 'text',
@@ -396,11 +351,7 @@ $(document).ready(() => {
   // ===========================================================================
 
   function flipCourt(thisObj) {
-    console.log(map.getZoom());
     // set our zoom level based on window width when the courtflipper is clicked
-
-    // const windowWidth = $(window).width();
-    // const zoomLevel = windowWidth > 1053 ? 17 : 18.19;
 
     // check for frontcourt/backcourt class on the button, then reorient the map and
     // reset the button text accordingly
@@ -526,7 +477,6 @@ $(document).ready(() => {
 
     // grabs the filterValue from the .milestone clicked
     const filterValue = MILESTONES[i].milestone_id;
-    console.log(filterValue);
     // fade out and grey out the non-milestone shots
     map.setPaintProperty('dirkShots', 'circle-color', '#d7d7d7');
     map.setPaintProperty('dirkShots', 'circle-opacity', {
