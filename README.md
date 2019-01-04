@@ -10,7 +10,7 @@ To do so, follow these steps in the shooting update dance:
 
 2. Navigate to the `scraper` directory in the CL and then run `pipenv shell` followed by `python dirk_update.py`. This checks NBA's api for any new shots by Dirk and outputs a new csv of all shots and a new geojson file
 
-3. Upload our csv to the aws data store so we can use it to build our filters. Do so by using this command: `s3cmd put src/scraper/data/dirk-shots.csv s3://interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-raw/ \
+3. Upload our csv to the aws data store so we can use it to build our filters. Do so by navigating back to the root of the project and using this command: `s3cmd put src/scraper/data/dirk-shots.csv s3://interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-raw/ \
 --acl-public --recursive --mime-type="text/csv" \
 --access_key={{access_key}} --secret_key={{secret_key}}`
 
