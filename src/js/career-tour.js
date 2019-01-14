@@ -4,7 +4,7 @@ export default [
     milestone_type: 'game',
     date: 'Feb. 5, 1999',
     opponent: 'Seattle',
-    note: 'Dirk made his debut on Feb. 5, 1999. It wasn’t exactly a preview of what was to come. In just 16 minutes, Dirk went 0-for-5 from the field, finishing with just two points.',
+    note: 'Nowitzki’s debut wasn’t exactly a preview of what was to come. In just 16 minutes, he went 0-for-5 from the field, finishing with just two points.',
     milestone_id: 29800012,
   },
   {
@@ -12,7 +12,7 @@ export default [
     milestone_type: 'shot',
     date: 'Feb. 7, 1999',
     opponent: 'Golden State',
-    note: 'Two nights after he debuted with an 0-for from the field, Dirk finally scored his first field goal, a 16-foot jumper from the right baseline. He finished the night with 16 points.',
+    note: 'Two nights after he debuted with an 0-for from the field, Nowitzki scored his first field goal, a 16-foot jumper from the right baseline. He finished the night with 16 points.',
     milestone_id: 5,
   },
   {
@@ -20,7 +20,7 @@ export default [
     milestone_type: 'game',
     date: 'Dec. 2, 2004',
     opponent: 'Houston Rockets',
-    note: 'Dirk scored a career-high 53 in a 113-106 win against the Rockets in 2004. He finished the night 15-for-32 from the field and 21-for-22 from the free throw line.',
+    note: 'Nowitzki scored a career-high 53 in a 113-106 win against the Rockets in 2004. He finished the night 15-for-32 from the field and 21-for-22 from the free throw line.',
     milestone_id: 20400222,
   },
   {
@@ -28,7 +28,7 @@ export default [
     milestone_type: 'shot',
     date: 'Jan. 18, 2005',
     opponent: 'Washington',
-    note: 'Dirk notched his 10,000 point with a 23-foot jumper against the Washington Wizards, becoming the fifth (and last) Maverick to reach that milestone.',
+    note: 'Nowitzki notched his 10,000 point with a 23-foot jumper against the Washington Wizards, becoming the fifth (and last) Maverick to reach that milestone.',
     milestone_id: 8145,
   },
   {
@@ -36,7 +36,7 @@ export default [
     milestone_type: 'shot',
     date: 'May 22, 2006',
     opponent: 'San Antonio Spurs',
-    note: 'In Game 7 of the Western Conference semifinals, Dirk delievered a driving layup against Bruce Bowen and Manu Ginobli, drawing a foul. He nailed the free throw, sending the game to overtime.',
+    note: 'In Game 7 of the Western Conference semifinals, Nowitkzi delievered a driving layup against Bruce Bowen and Manu Ginobli, drawing a foul. He nailed the free throw, sending the game to overtime.',
     milestone_id: 10954,
   },
   {
@@ -44,7 +44,7 @@ export default [
     milestone_type: 'shot',
     date: 'Jan. 13, 2010',
     opponent: 'Los Angeles Lakers',
-    note: 'Dirk reached 20,000 points with a 13-foot jumper over Los Angeles Lakers’ forward Lamar Odom in 2010. He’s the only Maverick to ever reach the 20,000 point mark.',
+    note: 'Nowitzki reached 20,000 points with a 13-foot jumper over Los Angeles Lakers’ forward Lamar Odom in 2010. He’s the only Maverick to ever reach the mark.',
     milestone_id: 16508,
   },
   {

@@ -26033,3 +26033,23 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26031,2018-19,Regular Season,0021800554,"JAN 02, 2019",DAL @ CHA,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,28,-29,285,CHA
 26032,2018-19,Regular Season,0021800554,"JAN 02, 2019",DAL @ CHA,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-150,204,CHA
 26033,2018-19,Regular Season,0021800554,"JAN 02, 2019",DAL @ CHA,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,11,257,CHA
+26034,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,98,239,BOS
+26035,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-206,140,BOS
+26036,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,77,255,BOS
+26037,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,35,259,BOS
+26038,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,3,Missed Shot,Jump Shot,3PT Field Goal,Left Corner 3,24+ ft.,23,-239,-4,BOS
+26039,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,4,Missed Shot,Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,23,231,38,BOS
+26040,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,4,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,In The Paint (Non-RA),Less Than 8 ft.,7,61,44,BOS
+26041,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,4,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,16-24 ft.,16,163,7,BOS
+26042,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,4,257,BOS
+26043,2018-19,Regular Season,0021800566,"JAN 04, 2019",DAL @ BOS,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-185,178,BOS
+26044,2018-19,Regular Season,0021800596,"JAN 07, 2019",DAL vs. LAL,2,Made Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,16-24 ft.,20,120,163,LAL
+26045,2018-19,Regular Season,0021800596,"JAN 07, 2019",DAL vs. LAL,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,17,49,169,LAL
+26046,2018-19,Regular Season,0021800596,"JAN 07, 2019",DAL vs. LAL,3,Missed Shot,Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,24,230,73,LAL
+26047,2018-19,Regular Season,0021800626,"JAN 11, 2019",DAL @ MIN,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,119,212,MIN
+26048,2018-19,Regular Season,0021800626,"JAN 11, 2019",DAL @ MIN,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-144,217,MIN
+26049,2018-19,Regular Season,0021800626,"JAN 11, 2019",DAL @ MIN,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-92,232,MIN
+26050,2018-19,Regular Season,0021800626,"JAN 11, 2019",DAL @ MIN,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-178,168,MIN
+26051,2018-19,Regular Season,0021800642,"JAN 13, 2019",DAL vs. GSW,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-117,232,GSW
+26052,2018-19,Regular Season,0021800642,"JAN 13, 2019",DAL vs. GSW,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-58,254,GSW
+26053,2018-19,Regular Season,0021800642,"JAN 13, 2019",DAL vs. GSW,2,Missed Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,16-24 ft.,22,-52,215,GSW
