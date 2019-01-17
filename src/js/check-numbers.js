@@ -52,4 +52,21 @@ function checkNumbersByGame(year, data) {
   console.log(`${gDate}: ${fgm}-${fga}`);
 }
 
-export default { checkNumbersByGame, checkNumbersByYear };
+function checkCounts(data) {
+  console.log(data);
+  let dunks = 0;
+  let threes = 0;
+
+  data.forEach((shot) => {
+    if (shot.shot_type === 'Dunk Shot') {
+      dunks += 1;
+    }
+    if (shot.shot_value === '3PT Field Goal') {
+      threes += 1;
+    }
+  });
+
+  console.log(dunks, threes);
+}
+
+export default { checkNumbersByGame, checkNumbersByYear, checkCounts };
