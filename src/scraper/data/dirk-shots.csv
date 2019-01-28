@@ -26069,3 +26069,7 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26067,2018-19,Regular Season,0021800704,"JAN 22, 2019",DAL vs. LAC,3,Made Shot,Jump Shot,3PT Field Goal,Left Corner 3,24+ ft.,22,-221,14,LAC
 26068,2018-19,Regular Season,0021800704,"JAN 22, 2019",DAL vs. LAC,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-42,246,LAC
 26069,2018-19,Regular Season,0021800704,"JAN 22, 2019",DAL vs. LAC,4,Missed Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,16-24 ft.,18,120,137,LAC
+26070,2018-19,Regular Season,0021800726,"JAN 25, 2019",DAL vs. DET,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,17,95,144,DET
+26071,2018-19,Regular Season,0021800726,"JAN 25, 2019",DAL vs. DET,2,Missed Shot,Jump Shot,3PT Field Goal,Left Corner 3,24+ ft.,23,-231,20,DET
+26072,2018-19,Regular Season,0021800739,"JAN 27, 2019",DAL vs. TOR,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-116,231,TOR
+26073,2018-19,Regular Season,0021800739,"JAN 27, 2019",DAL vs. TOR,2,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,24+ ft.,25,68,242,TOR

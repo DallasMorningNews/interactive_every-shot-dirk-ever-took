@@ -26,9 +26,9 @@ To do so, follow these steps in the shooting update dance:
 
 6. That folder should then be uploaded to aws, using the following command line command:
 ```
-s3cmd put dirk-shots s3://interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-proper/ \
---acl-public --recursive --mime-type="application/x-protobuf" \
---add-header="Content-Encoding:gzip" \
+  s3cmd put dirk-shots s3://interactives.dallasnews.com/data-store/2018/dirk/dirk-shots-proper/ \
+  --acl-public --recursive --mime-type="application/x-protobuf" \
+  --add-header="Content-Encoding:gzip" \
 --access_key={{access_key}} --secret_key={{secret_key}}
 ```
 
