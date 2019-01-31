@@ -26073,3 +26073,10 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26071,2018-19,Regular Season,0021800726,"JAN 25, 2019",DAL vs. DET,2,Missed Shot,Jump Shot,3PT Field Goal,Left Corner 3,24+ ft.,23,-231,20,DET
 26072,2018-19,Regular Season,0021800739,"JAN 27, 2019",DAL vs. TOR,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-116,231,TOR
 26073,2018-19,Regular Season,0021800739,"JAN 27, 2019",DAL vs. TOR,2,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,24+ ft.,25,68,242,TOR
+26074,2018-19,Regular Season,0021800758,"JAN 30, 2019",DAL @ NYK,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-147,198,NYK
+26075,2018-19,Regular Season,0021800758,"JAN 30, 2019",DAL @ NYK,2,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,8-16 ft.,8,-84,30,NYK
+26076,2018-19,Regular Season,0021800758,"JAN 30, 2019",DAL @ NYK,2,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,8-16 ft.,13,134,-11,NYK
+26077,2018-19,Regular Season,0021800758,"JAN 30, 2019",DAL @ NYK,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,23,-58,224,NYK
+26078,2018-19,Regular Season,0021800758,"JAN 30, 2019",DAL @ NYK,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-168,190,NYK
+26079,2018-19,Regular Season,0021800758,"JAN 30, 2019",DAL @ NYK,4,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,19,78,184,NYK
+26080,2018-19,Regular Season,0021800758,"JAN 30, 2019",DAL @ NYK,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,90,237,NYK
