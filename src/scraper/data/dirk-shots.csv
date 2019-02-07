@@ -26089,3 +26089,8 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26087,2018-19,Regular Season,0021800764,"JAN 31, 2019",DAL @ DET,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,49,251,DET
 26088,2018-19,Regular Season,0021800764,"JAN 31, 2019",DAL @ DET,4,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,13,131,21,DET
 26089,2018-19,Regular Season,0021800764,"JAN 31, 2019",DAL @ DET,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,3,252,DET
+26090,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,16,-66,153,CHA
+26091,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,1,Missed Shot,Jump Shot,3PT Field Goal,Left Corner 3,24+ ft.,24,-228,76,CHA
+26092,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,104,222,CHA
+26093,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,3,Missed Shot,Fadeaway Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,22,226,41,CHA
+26094,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-18,251,CHA
