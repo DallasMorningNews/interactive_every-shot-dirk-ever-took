@@ -26094,3 +26094,12 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26092,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,104,222,CHA
 26093,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,3,Missed Shot,Fadeaway Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,22,226,41,CHA
 26094,2018-19,Regular Season,0021800807,"FEB 06, 2019",DAL vs. CHA,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-18,251,CHA
+26095,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,119,224,MIL
+26096,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,1,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,19,110,159,MIL
+26097,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,7,247,MIL
+26098,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,2,Missed Shot,Jump Shot,3PT Field Goal,Left Corner 3,24+ ft.,23,-230,14,MIL
+26099,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,2,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,In The Paint (Non-RA),8-16 ft.,12,5,120,MIL
+26100,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,44,253,MIL
+26101,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,190,158,MIL
+26102,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,3,Missed Shot,Turnaround Fadeaway Bank Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,9,90,18,MIL
+26103,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-13,257,MIL
