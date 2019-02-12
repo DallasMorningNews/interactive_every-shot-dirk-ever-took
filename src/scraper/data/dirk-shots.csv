@@ -26105,3 +26105,7 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26103,2018-19,Regular Season,0021800821,"FEB 08, 2019",DAL vs. MIL,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-13,257,MIL
 26104,2018-19,Regular Season,0021800834,"FEB 10, 2019",DAL vs. POR,1,Made Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-183,187,POR
 26105,2018-19,Regular Season,0021800834,"FEB 10, 2019",DAL vs. POR,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,183,169,POR
+26106,2018-19,Regular Season,0021800844,"FEB 11, 2019",DAL @ HOU,1,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,In The Paint (Non-RA),8-16 ft.,13,74,110,HOU
+26107,2018-19,Regular Season,0021800844,"FEB 11, 2019",DAL @ HOU,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-31,276,HOU
+26108,2018-19,Regular Season,0021800844,"FEB 11, 2019",DAL @ HOU,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,28,70,276,HOU
+26109,2018-19,Regular Season,0021800844,"FEB 11, 2019",DAL @ HOU,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,15,-156,16,HOU
