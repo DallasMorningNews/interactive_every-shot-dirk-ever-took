@@ -26123,3 +26123,34 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26121,2018-19,Regular Season,0021800859,"FEB 13, 2019",DAL vs. MIA,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,95,251,MIA
 26122,2018-19,Regular Season,0021800859,"FEB 13, 2019",DAL vs. MIA,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-10,257,MIA
 26123,2018-19,Regular Season,0021800859,"FEB 13, 2019",DAL vs. MIA,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-178,182,MIA
+26124,2018-19,Regular Season,0021800880,"FEB 22, 2019",DAL vs. DEN,1,Missed Shot,Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,22,228,-10,DEN
+26125,2018-19,Regular Season,0021800880,"FEB 22, 2019",DAL vs. DEN,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-9,264,DEN
+26126,2018-19,Regular Season,0021800880,"FEB 22, 2019",DAL vs. DEN,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,151,112,DEN
+26127,2018-19,Regular Season,0021800880,"FEB 22, 2019",DAL vs. DEN,2,Missed Shot,Cutting Finger Roll Layup Shot,2PT Field Goal,Restricted Area,Less Than 8 ft.,2,-12,25,DEN
+26128,2018-19,Regular Season,0021800880,"FEB 22, 2019",DAL vs. DEN,2,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,12,119,26,DEN
+26129,2018-19,Regular Season,0021800880,"FEB 22, 2019",DAL vs. DEN,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,20,-139,154,DEN
+26130,2018-19,Regular Season,0021800880,"FEB 22, 2019",DAL vs. DEN,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-69,240,DEN
+26131,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-111,232,UTA
+26132,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-96,234,UTA
+26133,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-5,251,UTA
+26134,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,2,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,164,90,UTA
+26135,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,2,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,10,107,21,UTA
+26136,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-195,170,UTA
+26137,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-121,222,UTA
+26138,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,3,Missed Shot,Step Back Jump shot,2PT Field Goal,Mid-Range,8-16 ft.,12,89,92,UTA
+26139,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-123,230,UTA
+26140,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-115,231,UTA
+26141,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,4,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,17,-123,120,UTA
+26142,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-106,249,UTA
+26143,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,16,254,UTA
+26144,2018-19,Regular Season,0021800893,"FEB 23, 2019",DAL @ UTA,4,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,20,30,204,UTA
+26145,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-88,257,LAC
+26146,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,1,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,136,118,LAC
+26147,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,-90,163,LAC
+26148,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,120,226,LAC
+26149,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,212,130,LAC
+26150,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,113,233,LAC
+26151,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,3,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,23,230,19,LAC
+26152,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,128,232,LAC
+26153,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,4,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,19,-58,184,LAC
+26154,2018-19,Regular Season,0021800907,"FEB 25, 2019",DAL @ LAC,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,132,243,LAC

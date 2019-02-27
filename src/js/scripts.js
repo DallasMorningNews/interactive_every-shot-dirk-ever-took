@@ -437,9 +437,21 @@ $(document).ready(() => {
     };
 
     // add in the shots that match the milestone
-    filteredData.features = MILESTONE_SHOTS.features.filter(
-      shot => parseInt(shot.properties[filterKey], 10) === filterValue,
-    );
+
+    if (typeof filterValue === 'object') {
+      console.log('object');
+      filteredData.features = MILESTONE_SHOTS.features.filter((shot) => {
+        console.log(shot);
+        if (parseInt(shot.properties[filterKey], 10) >= filterValue[0] && parseInt(shot.properties[filterKey], 10) <= filterValue[1]) {
+          console.log(shot);
+          return shot;
+        }
+      });
+    } else {
+      filteredData.features = MILESTONE_SHOTS.features.filter(
+        shot => parseInt(shot.properties[filterKey], 10) === filterValue,
+      );
+    }
 
     // adds those shots as a source to the shotchart
     map.addSource('dirkFilter', {
