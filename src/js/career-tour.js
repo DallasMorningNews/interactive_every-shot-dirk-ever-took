@@ -48,6 +48,14 @@ export default [
     milestone_id: 16508,
   },
   {
+    milestone: '2011 NBA Finals',
+    milestone_type: 'games',
+    date: 'TK',
+    opponent: 'Miami Heat',
+    note: 'TK',
+    milestone_id: [41000401, 41000406],
+  },
+  {
     milestone: 'Final layup of Game 6 of the 2011 Finals',
     milestone_type: 'shot',
     date: 'June 12, 2011',
