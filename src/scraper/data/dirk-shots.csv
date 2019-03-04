@@ -26164,3 +26164,13 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26162,2018-19,Regular Season,0021800918,"FEB 27, 2019",DAL vs. IND,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,170,182,IND
 26163,2018-19,Regular Season,0021800918,"FEB 27, 2019",DAL vs. IND,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-135,221,IND
 26164,2018-19,Regular Season,0021800918,"FEB 27, 2019",DAL vs. IND,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,144,216,IND
+26165,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,108,231,MEM
+26166,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,1,Made Shot,Putback Layup Shot,2PT Field Goal,In The Paint (Non-RA),Less Than 8 ft.,4,28,29,MEM
+26167,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,1,Missed Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,16-24 ft.,20,-88,186,MEM
+26168,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-58,252,MEM
+26169,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,2,Missed Shot,Step Back Jump shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-72,246,MEM
+26170,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,169,179,MEM
+26171,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-117,222,MEM
+26172,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,3,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,8-16 ft.,11,-116,10,MEM
+26173,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,4,Missed Shot,Driving Floating Jump Shot,2PT Field Goal,In The Paint (Non-RA),Less Than 8 ft.,6,20,58,MEM
+26174,2018-19,Regular Season,0021800939,"MAR 02, 2019",DAL vs. MEM,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-68,242,MEM
