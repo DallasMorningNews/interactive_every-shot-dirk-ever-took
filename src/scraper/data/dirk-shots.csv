@@ -26187,3 +26187,6 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26185,2018-19,Regular Season,0021800952,"MAR 04, 2019",DAL @ BKN,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,101,225,BKN
 26186,2018-19,Regular Season,0021800952,"MAR 04, 2019",DAL @ BKN,4,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,8-16 ft.,14,-141,15,BKN
 26187,2018-19,Regular Season,0021800952,"MAR 04, 2019",DAL @ BKN,4,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,8-16 ft.,13,-126,32,BKN
+26188,2018-19,Regular Season,0021800967,"MAR 06, 2019",DAL @ WAS,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,99,260,WAS
+26189,2018-19,Regular Season,0021800967,"MAR 06, 2019",DAL @ WAS,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,19,127,153,WAS
+26190,2018-19,Regular Season,0021800967,"MAR 06, 2019",DAL @ WAS,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-137,243,WAS
