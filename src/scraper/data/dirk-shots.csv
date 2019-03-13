@@ -26204,3 +26204,8 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26202,2018-19,Regular Season,0021800997,"MAR 10, 2019",DAL vs. HOU,1,Made Shot,Driving Layup Shot,2PT Field Goal,Restricted Area,Less Than 8 ft.,2,-11,25,HOU
 26203,2018-19,Regular Season,0021800997,"MAR 10, 2019",DAL vs. HOU,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,0,257,HOU
 26204,2018-19,Regular Season,0021800997,"MAR 10, 2019",DAL vs. HOU,1,Missed Shot,Turnaround Fadeaway Bank Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,13,130,23,HOU
+26205,2018-19,Regular Season,0021801011,"MAR 12, 2019",DAL vs. SAS,1,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,16,144,70,SAS
+26206,2018-19,Regular Season,0021801011,"MAR 12, 2019",DAL vs. SAS,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,48,251,SAS
+26207,2018-19,Regular Season,0021801011,"MAR 12, 2019",DAL vs. SAS,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,113,226,SAS
+26208,2018-19,Regular Season,0021801011,"MAR 12, 2019",DAL vs. SAS,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,98,230,SAS
+26209,2018-19,Regular Season,0021801011,"MAR 12, 2019",DAL vs. SAS,3,Missed Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,16,-166,-2,SAS
