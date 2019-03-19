@@ -26227,3 +26227,9 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26225,2018-19,Regular Season,0021801037,"MAR 16, 2019",DAL vs. CLE,4,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,19,-49,193,CLE
 26226,2018-19,Regular Season,0021801037,"MAR 16, 2019",DAL vs. CLE,4,Missed Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,10,100,20,CLE
 26227,2018-19,Regular Season,0021801037,"MAR 16, 2019",DAL vs. CLE,4,Missed Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,17,-94,147,CLE
+26228,2018-19,Regular Season,0021801056,"MAR 18, 2019",DAL vs. NOP,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,20,-30,200,NOP
+26229,2018-19,Regular Season,0021801056,"MAR 18, 2019",DAL vs. NOP,1,Made Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,19,26,192,NOP
+26230,2018-19,Regular Season,0021801056,"MAR 18, 2019",DAL vs. NOP,2,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,21,-93,194,NOP
+26231,2018-19,Regular Season,0021801056,"MAR 18, 2019",DAL vs. NOP,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,47,251,NOP
+26232,2018-19,Regular Season,0021801056,"MAR 18, 2019",DAL vs. NOP,3,Missed Shot,Pullup Jump shot,2PT Field Goal,Mid-Range,16-24 ft.,19,-36,195,NOP
+26233,2018-19,Regular Season,0021801056,"MAR 18, 2019",DAL vs. NOP,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-87,237,NOP

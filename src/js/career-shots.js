@@ -774,5 +774,25 @@ export default {
 			'opp': 'LAL',
 			'id': 25017
 		}
-	},],
+	},
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.133276429703694e-05, -0.000526765028655042]
+    },
+    "properties": {
+      "gda": "MAR 18, 2019",
+      "gid": 21801056,
+      "r": 1,
+      "se_type": "Regular Season",
+      "sd": "19",
+      "sr": "16-24 ft.",
+      "st": "Fadeaway Jump Shot",
+      "y": "2018-19",
+      "opp": "NOP",
+      "id": "26229"
+    }
+  },
+],
 }

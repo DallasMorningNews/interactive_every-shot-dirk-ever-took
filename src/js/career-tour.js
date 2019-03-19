@@ -71,4 +71,12 @@ export default [
     note: 'Dirk scored his 30,000th point with a fadeaway jumper from the right baseline over the Lakers’ Larry Nance Jr., becoming the sixth player to join the 30,000 point club.',
     milestone_id: 25017,
   },
+  {
+    milestone: 'Passing Wilt',
+    milestone_type: 'shot',
+    date: 'March 18, 2019',
+    opponent: 'New Orleans Pelicans',
+    note: 'Nowitzki scored his 31,420th point with a fadeaway jumper from the top of the key over the Pelicans’ Kenrich Williams, passing Wilt Chamberlain to become the No. 6 scorer in NBA history.',
+    milestone_id: 26229,
+  },
 ];
