@@ -26236,3 +26236,8 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26234,2018-19,Regular Season,0021801073,"MAR 20, 2019",DAL @ POR,3,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,16,140,80,POR
 26235,2018-19,Regular Season,0021801073,"MAR 20, 2019",DAL @ POR,3,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,In The Paint (Non-RA),8-16 ft.,9,49,84,POR
 26236,2018-19,Regular Season,0021801073,"MAR 20, 2019",DAL @ POR,3,Missed Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,24+ ft.,25,62,243,POR
+26237,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,1,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,20,187,81,SAC
+26238,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,1,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,21,-125,169,SAC
+26239,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,17,-67,159,SAC
+26240,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-133,228,SAC
+26241,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,7,248,SAC
