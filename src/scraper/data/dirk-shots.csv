@@ -26241,3 +26241,17 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26239,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,17,-67,159,SAC
 26240,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-133,228,SAC
 26241,2018-19,Regular Season,0021801078,"MAR 21, 2019",DAL @ SAC,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,7,248,SAC
+26242,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,21,119,183,GSW
+26243,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,0,266,GSW
+26244,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,1,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,139,231,GSW
+26245,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,1,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,16,-4,169,GSW
+26246,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,1,Missed Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),8-16 ft.,8,-8,80,GSW
+26247,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,2,Missed Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,128,129,GSW
+26248,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,3,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,21,-120,184,GSW
+26249,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-5,279,GSW
+26250,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,33,-116,317,GSW
+26251,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,3,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-155,222,GSW
+26252,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-9,275,GSW
+26253,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-11,267,GSW
+26254,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,27,-76,263,GSW
+26255,2018-19,Regular Season,0021801092,"MAR 23, 2019",DAL @ GSW,4,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,16-24 ft.,17,123,128,GSW
