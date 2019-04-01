@@ -26274,3 +26274,13 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26272,2018-19,Regular Season,0021801124,"MAR 28, 2019",DAL @ MIA,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,166,210,MIA
 26273,2018-19,Regular Season,0021801124,"MAR 28, 2019",DAL @ MIA,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,145,219,MIA
 26274,2018-19,Regular Season,0021801124,"MAR 28, 2019",DAL @ MIA,4,Missed Shot,Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,23,235,46,MIA
+26275,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,1,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,19,-117,157,OKC
+26276,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-46,241,OKC
+26277,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,1,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,24,257,OKC
+26278,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,1,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,15,-147,-38,OKC
+26279,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,2,Missed Shot,Driving Hook Shot,2PT Field Goal,In The Paint (Non-RA),Less Than 8 ft.,7,-32,63,OKC
+26280,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,2,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,In The Paint (Non-RA),8-16 ft.,8,-27,80,OKC
+26281,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,34,245,OKC
+26282,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,9,258,OKC
+26283,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,4,Missed Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,9,83,55,OKC
+26284,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,106,237,OKC
