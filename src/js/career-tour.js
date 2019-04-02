@@ -29,7 +29,7 @@ export default [
     date: 'Jan. 18, 2005',
     opponent: 'Washington',
     note: 'Nowitzki notched his 10,000 point with a 23-foot jumper against the Washington Wizards, becoming the fifth (and last) Maverick to reach that milestone.',
-    milestone_id: 8145,
+    milestone_id: 8146,
   },
   {
     milestone: '2006 Western Conference Semifinals',
@@ -45,7 +45,7 @@ export default [
     date: 'Jan. 13, 2010',
     opponent: 'Los Angeles Lakers',
     note: 'Nowitzki reached 20,000 points with a 13-foot jumper over Los Angeles Lakers’ forward Lamar Odom in 2010. He’s the only Maverick to ever reach the mark.',
-    milestone_id: 16508,
+    milestone_id: 16509,
   },
   {
     milestone: '2011 NBA Finals',
@@ -61,7 +61,7 @@ export default [
     date: 'June 12, 2011',
     opponent: 'Miami Heat',
     note: 'Dirk put the finishing touches on the Mavericks’ first NBA Championship, scoring the team’s final field goal with 31 seconds left in Game 6 of the NBA Finals.',
-    milestone_id: 18983,
+    milestone_id: 18984,
   },
   {
     milestone: '30,000 points',
@@ -69,7 +69,7 @@ export default [
     date: 'March 7, 2017',
     opponent: 'Los Angeles Lakers',
     note: 'Dirk scored his 30,000th point with a fadeaway jumper from the right baseline over the Lakers’ Larry Nance Jr., becoming the sixth player to join the 30,000 point club.',
-    milestone_id: 25017,
+    milestone_id: 25018,
   },
   {
     milestone: 'Passing Wilt',

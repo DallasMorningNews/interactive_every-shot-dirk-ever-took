@@ -26284,3 +26284,13 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26282,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,9,258,OKC
 26283,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,4,Missed Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,9,83,55,OKC
 26284,2018-19,Regular Season,0021801146,"MAR 31, 2019",DAL @ OKC,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,106,237,OKC
+26285,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,1,Missed Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,20,-138,158,PHI
+26286,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,1,Made Shot,Turnaround Fadeaway shot,2PT Field Goal,In The Paint (Non-RA),8-16 ft.,9,73,62,PHI
+26287,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,2,Missed Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,8,82,16,PHI
+26288,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,2,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,-160,91,PHI
+26289,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,2,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,-159,88,PHI
+26290,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,160,196,PHI
+26291,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,2,Made Shot,Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,23,231,21,PHI
+26292,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,7,251,PHI
+26293,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,3,Missed Shot,Turnaround Fadeaway Bank Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,12,121,32,PHI
+26294,2018-19,Regular Season,0021801158,"APR 01, 2019",DAL vs. PHI,3,Missed Shot,Jump Shot,2PT Field Goal,In The Paint (Non-RA),Less Than 8 ft.,7,-31,67,PHI
