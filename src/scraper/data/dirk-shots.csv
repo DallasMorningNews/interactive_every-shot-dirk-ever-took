@@ -26306,3 +26306,20 @@ id,year,season_type,game_id,game_date,game_teams,period,result,shot_type,shot_va
 26304,2018-19,Regular Season,0021801172,"APR 03, 2019",DAL vs. MIN,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-25,251,MIN
 26305,2018-19,Regular Season,0021801172,"APR 03, 2019",DAL vs. MIN,3,Missed Shot,Jump Shot,3PT Field Goal,Right Corner 3,24+ ft.,23,236,9,MIN
 26306,2018-19,Regular Season,0021801172,"APR 03, 2019",DAL vs. MIN,3,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-49,239,MIN
+26307,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,1,Made Shot,Cutting Dunk Shot,2PT Field Goal,Restricted Area,Less Than 8 ft.,0,0,7,MEM
+26308,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,1,Made Shot,Turnaround Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,10,105,8,MEM
+26309,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,2,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-94,241,MEM
+26310,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,2,Missed Shot,Pullup Jump shot,3PT Field Goal,Above the Break 3,24+ ft.,25,-9,257,MEM
+26311,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,2,Made Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,21,-6,211,MEM
+26312,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,16,248,MEM
+26313,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,4,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,110,151,MEM
+26314,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,4,Missed Shot,Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,18,145,108,MEM
+26315,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,4,Missed Shot,Turnaround Jump Shot,2PT Field Goal,Restricted Area,Less Than 8 ft.,3,24,31,MEM
+26316,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,4,Missed Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,16-24 ft.,16,127,109,MEM
+26317,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,4,Made Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,25,22,250,MEM
+26318,2018-19,Regular Season,0021801187,"APR 05, 2019",DAL vs. MEM,4,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-146,194,MEM
+26319,2018-19,Regular Season,0021801201,"APR 07, 2019",DAL @ MEM,2,Made Shot,Turnaround Jump Shot,2PT Field Goal,In The Paint (Non-RA),8-16 ft.,14,-77,128,MEM
+26320,2018-19,Regular Season,0021801201,"APR 07, 2019",DAL @ MEM,2,Missed Shot,Turnaround Fadeaway shot,2PT Field Goal,Mid-Range,8-16 ft.,10,-109,12,MEM
+26321,2018-19,Regular Season,0021801201,"APR 07, 2019",DAL @ MEM,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,24,-229,89,MEM
+26322,2018-19,Regular Season,0021801201,"APR 07, 2019",DAL @ MEM,2,Missed Shot,Fadeaway Jump Shot,2PT Field Goal,Mid-Range,8-16 ft.,9,92,23,MEM
+26323,2018-19,Regular Season,0021801201,"APR 07, 2019",DAL @ MEM,2,Missed Shot,Jump Shot,3PT Field Goal,Above the Break 3,24+ ft.,26,-62,253,MEM
