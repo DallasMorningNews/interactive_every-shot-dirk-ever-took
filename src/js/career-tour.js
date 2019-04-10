@@ -79,4 +79,12 @@ export default [
     note: 'Nowitzki scored his 31,420th point with a fadeaway jumper from the top of the key over the Pelicans’ Kenrich Williams, passing Wilt Chamberlain to become the No. 6 scorer in NBA history.',
     milestone_id: 26229,
   },
+  {
+    milestone: 'Final home game?',
+    milestone_type: 'game',
+    date: 'April 9, 2019',
+    opponent: 'Phoenix Suns',
+    note: 'Nowitzki saved his best for his last home game at the American Airlines Center, scoring a season-high 30 points on 11-of-31 shooting, including five 3-pointers.',
+    milestone_id: 21801216,
+  },
 ];
