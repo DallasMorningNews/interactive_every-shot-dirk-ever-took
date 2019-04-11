@@ -87,4 +87,12 @@ export default [
     note: 'Nowitzki saved his best for his last home game at the American Airlines Center, scoring a season-high 30 points on 11-of-31 shooting, including five 3-pointers.',
     milestone_id: 21801216,
   },
+  {
+    milestone: 'Final field goal',
+    milestone_type: 'shot',
+    date: 'April 10, 2019',
+    opponent: 'San Antonio Spurs',
+    note: 'Nowitzki capped off his 21-year career by hitting his final field goal attempt, a 19-foot fadeaway from the top of the key over San Antonio’s Drew Eubanks.',
+    milestone_id: 26375,
+  },
 ];
